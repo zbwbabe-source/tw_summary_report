@@ -12,14 +12,20 @@
     .nav-bar a { color:white;text-decoration:none;padding:3px 7px;border-radius:3px;font-size:7.5px;background:rgba(255,255,255,0.15);cursor:pointer;white-space:nowrap; }
     .nav-bar a:hover { background:rgba(255,255,255,0.3); }
     .wrap { max-width: 210mm; margin: 0 auto; background: #fff; padding: 12mm 11mm 18mm 11mm; min-height: 100vh; box-shadow: 0 0 20px rgba(0,0,0,0.08); }
-    .header { border-bottom: 2.5px solid #1a365d; padding-bottom: 8px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; }
-    .header-left { flex: 1; }
-    .header-left h1 { font-size: 15px; color: #1a365d; letter-spacing: -0.3px; }
-    .header-left p { font-size: 7.5px; color: #666; margin-top: 2px; }
-    .header-right { text-align: right; white-space: nowrap; flex-shrink: 0; }
-    .header-right .big-num { font-size: 18px; font-weight: bold; color: #1a365d; }
-    .header-right .big-num span { font-size: 9px; font-weight: normal; }
-    .header-right .sub { font-size: 8px; color: #666; margin-top: 2px; }
+    .header { border-bottom: 2.5px solid #1a365d; padding: 4px 0 8px; margin-bottom: 12px; }
+    .header-top { display: flex; justify-content: space-between; align-items: flex-end; gap: 18px; }
+    .header-left { flex: 1; min-width: 0; }
+    .header-left h1 { font-size: 16.5px; color: #12335f; letter-spacing: 0; line-height: 1.25; }
+    .header-left p { font-size: 7.5px; color: #4a5568; margin-top: 4px; line-height: 1.45; }
+    .header-right { text-align: right; white-space: nowrap; flex-shrink: 0; padding-bottom: 2px; }
+    .header-right .big-num { font-size: 21px; font-weight: 800; color: #12335f; letter-spacing: 0; line-height: 1; }
+    .header-right .big-num span { font-size: 8.5px; font-weight: 600; color: #12335f; }
+    .header-right .sub { font-size: 7.5px; color: #4a5568; margin-top: 5px; }
+    .header-kpis { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 5px; margin-top: 10px; }
+    .header-chip { display: inline-flex; align-items: center; gap: 4px; min-height: 18px; padding: 3px 7px; border: 1px solid #dbe5f2; border-radius: 4px; background: #f8fbff; color: #12335f; font-size: 7.5px; box-shadow: 0 1px 2px rgba(26,54,93,0.08); }
+    .header-chip b { font-size: 8px; }
+    .header-chip .good { background: #d8f5df; color: #247344; border-radius: 3px; padding: 1px 5px; font-weight: bold; }
+    .header-chip .warn { background: #fff2b8; color: #8a5a00; border-radius: 3px; padding: 1px 5px; font-weight: bold; }
     .page-title { font-size: 11px; font-weight: bold; color: #1a365d; border-left: 3.5px solid #1a365d; padding-left: 8px; margin: 16px 0 8px 0; }
     .divider { border: none; border-top: 1px dashed #cbd5e0; margin: 14px 0; }
     .container { display: flex; gap: 10px; }
@@ -68,6 +74,11 @@
     .note.green { color: #276749; }
     tr.highlight { background:#f0f4f8; font-weight: bold; }
     @media print { body { background: white; } .wrap { box-shadow: none; } .nav-bar { display: none; } }
+    @media (max-width: 720px) {
+      .header-top { align-items: flex-start; flex-direction: column; gap: 8px; }
+      .header-right { text-align: left; white-space: normal; }
+      .header-kpis { justify-content: flex-start; }
+    }
   </style>
 </head>
 <body>
@@ -88,18 +99,22 @@
 
   <!-- ===== HEADER ===== -->
   <div class="header">
-    <div class="header-left">
-      <h1>MLB 브랜드 2026년 4월 경영 보고서 (대만)</h1>
-      <p>F&F Taiwan · 보고기간: 2026.04 당월 · 단위: K HKD · 분석기준: 2026년 4월 vs 2025년 4월 (YoY) &nbsp;|&nbsp; 5월 MTD 추세 포함 (Section 3, 기준일 5/12)</p>
-    </div>
-    <div class="header-right">
-      <div class="big-num">13,862K <span>HKD (MLB 4월 당월 실판매출)</span></div>
-      <div class="sub">
-        YoY 128% &nbsp;
-        <span class="badge-up" style="font-size:8px;">영업이익 497K &nbsp;이익률 3.8% (+0.5%p)</span>&nbsp;
-        할인율 20.0%&nbsp;<span class="badge-up" style="font-size:8px;">YoY -1.5%p 개선</span>&nbsp;
-        평당매출 YoY 132%
+    <div class="header-top">
+      <div class="header-left">
+        <h1>MLB 브랜드 2026년 4월 경영 보고서 (대만)</h1>
+        <p>F&F Taiwan · 보고기간: 2026.04 당월 / 1~4월 누적 · 단위: K HKD · 분석기준: 2026년 4월 vs 2025년 4월 &nbsp;|&nbsp; DISCOVERY 브랜드 현황 포함 (Section 7) &nbsp;|&nbsp; 5월 MTD 추세 포함 (Section 3)</p>
       </div>
+      <div class="header-right">
+        <div class="big-num">13,862K <span>HKD (MLB 4월 당월 실판매출)</span></div>
+        <div class="sub">4월 당월 실판매출 · 단위 K HKD</div>
+      </div>
+    </div>
+    <div class="header-kpis">
+      <span class="header-chip"><b>YoY</b> 128%</span>
+      <span class="header-chip"><b>영업이익</b> 497K <span class="good">이익률 +0.5%p</span></span>
+      <span class="header-chip"><b>할인율</b> 20.0% <span class="good">개선</span></span>
+      <span class="header-chip"><b>온라인</b> YoY 146% <span class="good">고성장</span></span>
+      <span class="header-chip"><b>평당매출</b> YoY 132% <span class="good">양호</span></span>
     </div>
   </div>
 
