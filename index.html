@@ -1,753 +1,281 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MLB·DISCOVERY 브랜드 2026년 4월 경영 보고서 (대만)</title>
+  <title>MLB Taiwan 2026년 5월 경영 보고서</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif; font-size: 9px; color: #333; background: #f7fafc; line-height: 1.3; }
-    .nav-bar { position: sticky; top: 0; z-index: 100; background: #1a365d; padding: 6px 12px; display: flex; align-items: center; gap: 6px; max-width: 210mm; margin: 0 auto; box-shadow: 0 2px 8px rgba(0,0,0,0.15); flex-wrap: wrap; }
-    .nav-brand { color: white; font-weight: bold; font-size: 10px; margin-right: 8px; white-space: nowrap; }
-    .nav-bar a { color:white;text-decoration:none;padding:3px 7px;border-radius:3px;font-size:7.5px;background:rgba(255,255,255,0.15);cursor:pointer;white-space:nowrap; }
-    .nav-bar a:hover { background:rgba(255,255,255,0.3); }
-    .wrap { max-width: 210mm; margin: 0 auto; background: #fff; padding: 12mm 11mm 18mm 11mm; min-height: 100vh; box-shadow: 0 0 20px rgba(0,0,0,0.08); }
-    .header { border-bottom: 2.5px solid #1a365d; padding: 4px 0 8px; margin-bottom: 12px; }
-    .header-top { display: flex; justify-content: space-between; align-items: flex-end; gap: 18px; }
-    .header-left { flex: 1; min-width: 0; }
-    .header-left h1 { font-size: 16.5px; color: #12335f; letter-spacing: 0; line-height: 1.25; }
-    .header-left p { font-size: 7.5px; color: #4a5568; margin-top: 4px; line-height: 1.45; }
-    .header-right { text-align: right; white-space: nowrap; flex-shrink: 0; padding-bottom: 2px; }
-    .header-right .big-num { font-size: 21px; font-weight: 800; color: #12335f; letter-spacing: 0; line-height: 1; }
-    .header-right .big-num span { font-size: 8.5px; font-weight: 600; color: #12335f; }
-    .header-right .sub { font-size: 7.5px; color: #4a5568; margin-top: 5px; }
-    .header-kpis { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 5px; margin-top: 10px; }
-    .header-chip { display: inline-flex; align-items: center; gap: 4px; min-height: 18px; padding: 3px 7px; border: 1px solid #dbe5f2; border-radius: 4px; background: #f8fbff; color: #12335f; font-size: 7.5px; box-shadow: 0 1px 2px rgba(26,54,93,0.08); }
-    .header-chip b { font-size: 8px; }
-    .header-chip .good { background: #d8f5df; color: #247344; border-radius: 3px; padding: 1px 5px; font-weight: bold; }
-    .header-chip .warn { background: #fff2b8; color: #8a5a00; border-radius: 3px; padding: 1px 5px; font-weight: bold; }
-    .page-title { font-size: 11px; font-weight: bold; color: #1a365d; border-left: 3.5px solid #1a365d; padding-left: 8px; margin: 16px 0 8px 0; }
-    .divider { border: none; border-top: 1px dashed #cbd5e0; margin: 14px 0; }
-    .container { display: flex; gap: 10px; }
-    .left, .right { width: 50%; }
-    .section { margin-bottom: 7px; }
-    .section-title { font-size: 8.5px; font-weight: bold; color: #1a365d; border-bottom: 1.5px solid #1a365d; padding-bottom: 2px; margin-bottom: 4px; }
-    table { width: 100%; border-collapse: collapse; font-size: 7.5px; }
-    th { background: #f0f4f8; padding: 2.5px 3px; text-align: left; font-weight: bold; border-bottom: 1px solid #cbd5e0; color: #2d3748; }
-    td { padding: 2.5px 3px; border-bottom: 1px solid #edf2f7; }
-    .num { text-align: right; }
-    .badge-up { background: #c6f6d5; color: #276749; padding: 1px 4px; border-radius: 2px; font-size: 7px; font-weight: bold; }
-    .badge-down { background: #fed7d7; color: #c53030; padding: 1px 4px; border-radius: 2px; font-size: 7px; font-weight: bold; }
-    .badge-warn { background: #fefcbf; color: #975a16; padding: 1px 4px; border-radius: 2px; font-size: 7px; font-weight: bold; }
-    .kpi-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; margin-bottom: 6px; }
-    .kpi-box { background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 4px; padding: 5px 4px; text-align: center; }
-    .kpi-label { font-size: 6.5px; color: #718096; margin-bottom: 1px; }
-    .kpi-value { font-size: 11px; font-weight: bold; color: #1a365d; }
-    .kpi-change { font-size: 6.5px; margin-top: 1px; }
-    .up { color: #276749; } .down { color: #c53030; }
-    .box { border-radius: 4px; padding: 6px 7px; margin-bottom: 6px; }
-    .box-red { background: #fff5f5; border-left: 3px solid #c53030; }
-    .box-yellow { background: #fffff0; border-left: 3px solid #d69e2e; }
-    .box-green { background: #f0fff4; border-left: 3px solid #38a169; }
-    .box-blue { background: #ebf8ff; border-left: 3px solid #3182ce; }
-    .box-dark { background: #1a365d; color: white; border-radius: 4px; padding: 7px; }
-    .box-orange { background: #fffaf0; border-left: 3px solid #dd6b20; }
-    .box-title { font-weight: bold; margin-bottom: 3px; font-size: 8.5px; }
-    .box-title.red { color: #c53030; } .box-title.yellow { color: #975a16; }
-    .box-title.green { color: #276749; } .box-title.blue { color: #2b6cb0; }
-    .box-title.orange { color: #c05621; }
-    ul { padding-left: 11px; margin: 0; }
-    li { margin-bottom: 2px; line-height: 1.4; }
-    .footer { text-align: center; font-size: 7px; color: #a0aec0; margin-top: 18px; padding-top: 6px; border-top: 1px solid #e2e8f0; }
-    .store-tag-tw { background:#ebf8ff;color:#2b6cb0;padding:1px 4px;border-radius:2px;font-size:6.5px;font-weight:bold; }
-    .store-tag-out { background:#fffaf0;color:#c05621;padding:1px 4px;border-radius:2px;font-size:6.5px;font-weight:bold; }
-    .store-tag-ol { background:#f0fff4;color:#276749;padding:1px 4px;border-radius:2px;font-size:6.5px;font-weight:bold; }
-    .store-tag-dx { background:#faf5ff;color:#6b46c1;padding:1px 4px;border-radius:2px;font-size:6.5px;font-weight:bold; }
-    .trend-box { background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 4px; padding: 5px 4px; text-align: center; }
-    .trend-label { font-size: 6px; color: #718096; margin-bottom: 1px; }
-    .trend-value { font-size: 13px; font-weight: bold; color: #1a365d; }
-    .trend-sub { font-size: 6.5px; margin-top: 1px; }
-    .five-grid { display: grid; grid-template-columns: repeat(5,1fr); gap:4px; margin-bottom:6px; }
-    .four-grid { display: grid; grid-template-columns: repeat(4,1fr); gap:4px; margin-bottom:6px; }
-    .note { font-size: 6.5px; color: #718096; margin-top: 2px; }
-    .note.red { color: #c53030; }
-    .note.green { color: #276749; }
-    tr.highlight { background:#f0f4f8; font-weight: bold; }
-    @media print { body { background: white; } .wrap { box-shadow: none; } .nav-bar { display: none; } }
-    @media (max-width: 720px) {
-      .header-top { align-items: flex-start; flex-direction: column; gap: 8px; }
-      .header-right { text-align: left; white-space: normal; }
-      .header-kpis { justify-content: flex-start; }
-    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif; font-size:9px; color:#263442; background:#f3f6f9; line-height:1.38; }
+    .nav { position:sticky; top:0; z-index:10; display:flex; flex-wrap:wrap; gap:5px; align-items:center; max-width:210mm; margin:auto; padding:7px 11px; background:#173a67; box-shadow:0 2px 8px rgba(0,0,0,.14); }
+    .nav b { margin-right:6px; color:#fff; font-size:10px; }
+    .nav a { padding:3px 6px; border-radius:3px; color:#fff; background:rgba(255,255,255,.15); text-decoration:none; font-size:7px; cursor:pointer; }
+    .wrap { max-width:210mm; min-height:100vh; margin:auto; padding:11mm 10mm 15mm; background:#fff; box-shadow:0 0 18px rgba(0,0,0,.08); }
+    .header { padding-bottom:9px; border-bottom:3px solid #173a67; }
+    .header-top { display:flex; justify-content:space-between; gap:16px; align-items:flex-end; }
+    h1 { color:#173a67; font-size:17px; line-height:1.22; }
+    .meta { margin-top:4px; color:#617386; font-size:7.3px; }
+    .hero { flex-shrink:0; text-align:right; }
+    .hero strong { display:block; color:#173a67; font-size:23px; line-height:1; }
+    .hero span { color:#617386; font-size:7px; }
+    .chips { display:flex; flex-wrap:wrap; gap:4px; justify-content:flex-end; margin-top:9px; }
+    .chip { padding:3px 6px; border:1px solid #d9e4ef; border-radius:4px; color:#173a67; background:#f8fbfe; font-size:7px; }
+    .chip b { font-size:7.5px; }
+    h2 { margin:15px 0 7px; padding-left:7px; border-left:4px solid #173a67; color:#173a67; font-size:11px; }
+    h3 { margin-bottom:4px; padding-bottom:2px; border-bottom:1.5px solid #173a67; color:#173a67; font-size:8.5px; }
+    .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:5px; }
+    .grid5 { display:grid; grid-template-columns:repeat(5,1fr); gap:4px; }
+    .card { padding:6px; border:1px solid #e0e8f0; border-radius:4px; background:#fbfdff; }
+    .kpi { text-align:center; }
+    .kpi small { display:block; color:#6c7c8d; font-size:6.4px; }
+    .kpi strong { display:block; margin-top:1px; color:#173a67; font-size:11px; }
+    .kpi em { display:block; margin-top:1px; font-size:6.4px; font-style:normal; }
+    .box { margin-bottom:6px; padding:6px 7px; border-left:3px solid; border-radius:3px; }
+    .blue { border-color:#3182ce; background:#edf8ff; }
+    .green { border-color:#38a169; background:#f0fff4; }
+    .yellow { border-color:#d69e2e; background:#fffff0; }
+    .red { border-color:#c53030; background:#fff5f5; }
+    .orange { border-color:#dd6b20; background:#fffaf0; }
+    .box b { display:block; margin-bottom:2px; }
+    ul { padding-left:12px; }
+    li { margin-bottom:2px; }
+    table { width:100%; border-collapse:collapse; font-size:7.3px; }
+    th { padding:3px; border-bottom:1px solid #cbd5e0; background:#f0f4f8; color:#32475b; text-align:left; }
+    td { padding:2.7px 3px; border-bottom:1px solid #edf2f7; }
+    .num { text-align:right; }
+    .total { background:#f0f4f8; font-weight:bold; }
+    .up,.good { color:#207344; }
+    .down,.bad { color:#c53030; }
+    .warn { color:#9c6a00; }
+    .badge { display:inline-block; padding:1px 4px; border-radius:2px; font-weight:bold; }
+    .badge.good { background:#d6f5df; }
+    .badge.warn { background:#fff4b8; }
+    .badge.bad { background:#fed7d7; }
+    .tag { display:inline-block; min-width:28px; margin-right:4px; padding:1px 3px; border-radius:2px; text-align:center; font-size:6.3px; font-weight:bold; }
+    .retail { color:#2b6cb0; background:#ebf8ff; }
+    .outlet { color:#c05621; background:#fffaf0; }
+    .online { color:#247344; background:#f0fff4; }
+    .note { margin-top:3px; color:#6c7c8d; font-size:6.5px; }
+    .foot { margin-top:16px; padding-top:6px; border-top:1px solid #e2e8f0; color:#8a9aac; text-align:center; font-size:6.7px; }
+    @media print { body{background:#fff}.nav{display:none}.wrap{box-shadow:none} }
+    @media(max-width:720px) { .header-top{align-items:flex-start;flex-direction:column}.hero{text-align:left}.chips{justify-content:flex-start}.grid2{grid-template-columns:1fr}.grid5{grid-template-columns:repeat(2,1fr)} }
   </style>
 </head>
 <body>
-
-<div class="nav-bar">
-  <span class="nav-brand">⚾ MLB TW 4월</span>
-  <a onclick="document.getElementById('sec1').scrollIntoView({behavior:'smooth'})">1.Executive Summary</a>
-  <a onclick="document.getElementById('sec2').scrollIntoView({behavior:'smooth'})">2.Q1→4월 추세</a>
-  <a onclick="document.getElementById('sec3').scrollIntoView({behavior:'smooth'})">3.5월 MTD</a>
-  <a onclick="document.getElementById('sec4').scrollIntoView({behavior:'smooth'})">4.할인율/재고</a>
-  <a onclick="document.getElementById('sec5').scrollIntoView({behavior:'smooth'})">5.매장효율성</a>
-  <a onclick="document.getElementById('sec6').scrollIntoView({behavior:'smooth'})">6.영업비</a>
-  <a onclick="document.getElementById('sec7').scrollIntoView({behavior:'smooth'})">7.DISCOVERY TW</a>
-  <a onclick="document.getElementById('sec8').scrollIntoView({behavior:'smooth'})">8.전략</a>
-</div>
-
-<div class="wrap">
-
-  <!-- ===== HEADER ===== -->
-  <div class="header">
-    <div class="header-top">
-      <div class="header-left">
-        <h1>MLB 브랜드 2026년 4월 경영 보고서 (대만)</h1>
-        <p>F&F Taiwan · 보고기간: 2026.04 당월 / 1~4월 누적 · 5월 MTD 기준일: 2026.05.12 · 단위: K HKD &nbsp;|&nbsp; DISCOVERY 브랜드 현황 포함 (Section 7) &nbsp;|&nbsp; 5월 MTD 추세 포함 (Section 3)</p>
+  <nav class="nav">
+    <b>MLB TW | 2026.05</b>
+    <a href="#s1">1. Summary</a><a href="#s2">2. 채널</a><a href="#s3">3. 매장</a><a href="#s4">4. 판매율·재고</a>
+    <a href="#s5">5. 손익</a><a href="#s6">6. W22</a><a href="#s7">7. DISCOVERY</a><a href="#s8">8. Action</a>
+  </nav>
+  <main class="wrap">
+    <header class="header">
+      <div class="header-top">
+        <div>
+          <h1>MLB Taiwan 2026년 5월 경영 보고서</h1>
+          <p class="meta">기준일: 2026.05.31 | 5월 마감 | 통화: K HKD 환산 | TW-M 26개 매장 | W22: 2026.05.25-05.31</p>
+        </div>
+        <div class="hero"><strong>14,046K</strong><span>5월 실판매출 · YoY 102%</span></div>
       </div>
-      <div class="header-right">
-        <div class="big-num">5,568K <span>HKD (MLB 5월 MTD 실판매출)</span></div>
-        <div class="sub">5월 MTD 실판매출 · 2026.05.12 기준</div>
+      <div class="chips">
+        <span class="chip">운영 목표 달성률 <b>97.0%</b></span>
+        <span class="chip">26SS 의류 판매율 <b>42.0%</b> <i class="good">+10.0%p</i></span>
+        <span class="chip">직접이익 <b>2,727K</b></span>
+        <span class="chip">직접이익률 <b>19.4%</b> <i class="good">+1.5%p</i></span>
+        <span class="chip">과시즌 의류 재고 <b>19,533K</b> <i class="good">-30%</i></span>
       </div>
-    </div>
-    <div class="header-kpis">
-      <span class="header-chip"><b>MTD YoY</b> 102%</span>
-      <span class="header-chip"><b>월말예상</b> 13,844K <span class="good">목표 96%</span></span>
-      <span class="header-chip"><b>YTD 누적</b> 65,534K <span class="good">YoY 117%</span></span>
-      <span class="header-chip"><b>할인율</b> 20.6% <span class="warn">전년比 +2.0%p</span></span>
-      <span class="header-chip"><b>활성매장</b> 19개</span>
-    </div>
-  </div>
+    </header>
 
-  <!-- ===== SECTION 1 ===== -->
-  <div class="page-title" id="sec1">1. Executive Summary — 4월 당월 핵심 KPI (MLB 브랜드)</div>
+    <section id="s1">
+      <h2>1. Executive Summary</h2>
+      <div class="grid5">
+        <div class="card kpi"><small>5월 실판매출</small><strong>14,046K</strong><em class="good">YoY 102%</em></div>
+        <div class="card kpi"><small>운영 목표</small><strong>14,473K</strong><em class="warn">달성률 97.0%</em></div>
+        <div class="card kpi"><small>손익 계획 대비</small><strong>88.0%</strong><em class="warn">PL 계획 15,955K</em></div>
+        <div class="card kpi"><small>직접이익률</small><strong>19.4%</strong><em class="good">전년 17.9%</em></div>
+        <div class="card kpi"><small>W22 매출</small><strong>2,733K</strong><em class="bad">WoW -27.0%</em></div>
+      </div>
+      <div class="grid2">
+        <div class="box green">
+          <b>5월 마감 포인트</b>
+          <ul>
+            <li>실판매출은 <b style="display:inline">14,046K</b>로 전년 수준을 유지하며 <b style="display:inline">YoY 102%</b> 마감.</li>
+            <li>26SS 의류 판매율은 <b style="display:inline">42.0%</b>로 전년 대비 <b style="display:inline">+10.0%p</b> 개선.</li>
+            <li>직접비율 절감으로 직접이익률은 <b style="display:inline">19.4%</b>, 전년 대비 <b style="display:inline">+1.5%p</b>.</li>
+          </ul>
+        </div>
+        <div class="box yellow">
+          <b>관리 포인트</b>
+          <ul>
+            <li>운영 목표 달성률은 <b style="display:inline">97.0%</b>, 손익 계획 대비 매출은 <b style="display:inline">88.0%</b>. 기준이 다른 두 지표를 구분해 관리.</li>
+            <li>W22는 WoW <b style="display:inline">-27.0%</b>. 우천 예상 주간에는 몰 중심 집객과 온라인 기획전 강화 필요.</li>
+            <li>NANGANG LALAPORT, CHUNGYO, LINKOU의 YoY 회복이 6월 핵심 과제.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-  <div class="kpi-grid">
-    <div class="kpi-box"><div class="kpi-label">실판매출 (당월)</div><div class="kpi-value">13,862K</div><div class="kpi-change up">YoY 128%</div></div>
-    <div class="kpi-box"><div class="kpi-label">영업이익 (당월)</div><div class="kpi-value">497K</div><div class="kpi-change up">이익률 3.8% (+0.5%p)</div></div>
-    <div class="kpi-box"><div class="kpi-label">할인율 (당월)</div><div class="kpi-value">20.0%</div><div class="kpi-change up">YoY -1.5%p 개선</div></div>
-    <div class="kpi-box"><div class="kpi-label">온라인 YoY (당월)</div><div class="kpi-value">146%</div><div class="kpi-change up">비중 29% +3.5%p</div></div>
-    <div class="kpi-box"><div class="kpi-label">활성 매장 (당월)</div><div class="kpi-value">17개</div><div class="kpi-change up">전년 15개 (+2 신규)</div></div>
-  </div>
+    <section id="s2">
+      <h2>2. 5월 채널별 실적</h2>
+      <div class="grid2">
+        <div>
+          <h3>채널별 5월 MTD (K HKD)</h3>
+          <table>
+            <thead><tr><th>채널</th><th class="num">목표</th><th class="num">실적</th><th class="num">YoY</th><th class="num">목표비</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag retail">리테일</span></td><td class="num">8,956</td><td class="num">8,973</td><td class="num"><span class="badge good">104%</span></td><td class="num">100.2%</td></tr>
+              <tr><td><span class="tag outlet">아울렛</span></td><td class="num">1,880</td><td class="num">1,961</td><td class="num"><span class="badge good">107%</span></td><td class="num">104.3%</td></tr>
+              <tr><td><span class="tag online">온라인</span></td><td class="num">3,637</td><td class="num">3,112</td><td class="num"><span class="badge warn">93%</span></td><td class="num">85.6%</td></tr>
+              <tr class="total"><td>TW 전체</td><td class="num">14,473</td><td class="num">14,046</td><td class="num">102%</td><td class="num">97.0%</td></tr>
+            </tbody>
+          </table>
+          <p class="note">운영 목표 기준. PL 계획 매출 15,955K와는 산정 기준이 다름.</p>
+        </div>
+        <div>
+          <h3>온라인 채널 상세 (K HKD)</h3>
+          <table>
+            <thead><tr><th>채널</th><th class="num">목표</th><th class="num">실적</th><th class="num">YoY</th><th class="num">목표비</th></tr></thead>
+            <tbody>
+              <tr><td>MOMO</td><td class="num">1,336</td><td class="num">1,114</td><td class="num">92%</td><td class="num">83.4%</td></tr>
+              <tr><td>Official Online</td><td class="num">1,484</td><td class="num">1,279</td><td class="num">93%</td><td class="num">86.2%</td></tr>
+              <tr><td>SHOPEE</td><td class="num">816</td><td class="num">719</td><td class="num">96%</td><td class="num">88.0%</td></tr>
+              <tr class="total"><td>온라인 합계</td><td class="num">3,637</td><td class="num">3,112</td><td class="num">93%</td><td class="num">85.6%</td></tr>
+            </tbody>
+          </table>
+          <p class="note bad">온라인은 전 채널이 전년 및 목표 미달. 6월 과시즌 소진 기획전 우선 실행.</p>
+        </div>
+      </div>
+    </section>
 
-  <div class="container">
-    <div class="left">
-      <div class="box box-green">
-        <div class="box-title green">✅ 4월 당월 주요 성과</div>
+    <section id="s3">
+      <h2>3. 주요 매장별 5월 MTD</h2>
+      <div class="box blue">
+        <b>전체 YoY 102%가 나온 이유</b>
         <ul>
-          <li><b>실판매출 13,862K (YoY 128%):</b> 영업이익 497K (YoY 150% 성장, 이익률 3.8%, 전년 3.3%→+0.5%p) — 신규 매장 효과 본격화</li>
-          <li><b>온라인 YoY 146% (비중 29%, +3.5%p):</b> Official Online 172% · SHOPEE 165% 고성장, 직접이익률 29.8%</li>
-          <li><b>리테일 YoY 130% (정상매장 견조):</b> TAIPEI 101 180% · HANSHIN ARENA 196% · METROWALK 172% — 리뉴얼 효과 본격화</li>
-          <li><b>신규 3개 매장 매출 합계 1,929K:</b> HANSHIN TC 673K(4/10 신규오픈 21일 영업) · LALAPORT TC 609K · NANGANG LALAPORT 440K — Q1 출점 매장 안착</li>
-          <li><b>26S 당시즌 판매율 32.8% (+11.4%p):</b> JP 61.7% · MT 58.1% · TR 60.9% — 조기투입 전략 효과 지속</li>
-          <li><b>5월 MTD YoY 102%:</b> 아울렛은 전년 대비 성장, 리테일·온라인은 전년 수준으로 5월 후반 보강 필요</li>
+          <li>ZHONGXIAO 리뉴얼 재오픈 효과 <b style="display:inline">YoY 171%</b>, HANSHIN TC 신규점 매출 <b style="display:inline">759K</b>, GLORIA OUTLET <b style="display:inline">YoY 122%</b>가 전체 매출을 방어.</li>
+          <li>반면 NANGANG LALAPORT <b style="display:inline">84%</b>, CHUNGYO <b style="display:inline">80%</b>, LINKOU <b style="display:inline">87%</b>와 온라인 <b style="display:inline">93%</b>가 성장 폭을 제한.</li>
         </ul>
       </div>
-    </div>
-    <div class="right">
-      <div class="box box-red">
-        <div class="box-title red">⚠️ 4월 당월 리스크 & 관찰 포인트</div>
-        <ul>
-          <li><b>아울렛 YoY 97% 역성장:</b> Mitsui TC Outlet 77% · LINKOU 93% — 정상채널 강세 흐름과 디커플링</li>
-          <li><b>영업비 YoY 191% 급증 (1,780K):</b> 급여 316% 급증 — TW Office 인건비 265K→992K(YoY 374%), 인센티브 659K(전년 3월 358K 반영분 누적) 일시 반영이 主요인. 인센티브 제외 시 인건비 YoY 약 126%로 정상 범위</li>
-          <li><b>지급수수료 YoY 212%:</b> 재고조정 219% · 면허/등록비 210% — Cegid 업그레이드 및 23FW Write-off 1회성 비용</li>
-          <li><b>25F 재고 YoY 110% (19,331K):</b> 의류 전체 재고 중 유일한 증가 — 가을시즌 진입 전 소진 계획 필요</li>
-          <li><b>중우타이중 YoY 96% 역성장:</b> Q1 누적 YoY 119% 대비 4월 둔화 — 상품 믹스 재점검 필요</li>
-          <li><b>가방 25F 재고 (YoY 66%) 추가 마크다운:</b> 24N~22N 구형 재고 처분 가속화 필요</li>
-          <li><b>4월 매장 운영 일시적 부담:</b> TAIMALL 리뉴얼(3/19~4/2, 15일) + ZHONGXIAO 리뉴얼(4/21~29, 9일) 휴업으로 일부 매출 손실 — 5월 정상 영업 회복 시 반등 예상</li>
-          <li><b>재고 건전성 유지 중:</b> 정기 실사 및 폐기(월 1,500~2,000만원 규모)로 재고 평가 충당금 거의 발생하지 않음 — 25F 재고 증가에도 회전 관리 양호</li>
-        </ul>
+      <div class="grid2">
+        <div>
+          <h3>상위 및 신규 매장 (K HKD)</h3>
+          <table>
+            <thead><tr><th>매장</th><th class="num">실적</th><th class="num">YoY</th><th class="num">목표비</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag retail">리테일</span>HANSHIN ARENA</td><td class="num">1,275</td><td class="num">107%</td><td class="num">103.1%</td></tr>
+              <tr><td><span class="tag outlet">아울렛</span>GLORIA OUTLET</td><td class="num">1,026</td><td class="num">122%</td><td class="num">118.5%</td></tr>
+              <tr><td><span class="tag retail">리테일</span>ZHONGXIAO</td><td class="num">876</td><td class="num">171%</td><td class="num">141.6%</td></tr>
+              <tr><td><span class="tag retail">리테일</span>HANSHIN TC</td><td class="num">759</td><td class="num"><span class="badge warn">신규</span></td><td class="num">122.7%</td></tr>
+              <tr><td><span class="tag retail">리테일</span>TAIPEI 101</td><td class="num">735</td><td class="num">132%</td><td class="num">99.1%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <h3>회복 필요 매장 (K HKD)</h3>
+          <table>
+            <thead><tr><th>매장</th><th class="num">실적</th><th class="num">YoY</th><th class="num">목표비</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag retail">리테일</span>CHUNGYO</td><td class="num">480</td><td class="num"><span class="badge bad">80%</span></td><td class="num">80.8%</td></tr>
+              <tr><td><span class="tag retail">리테일</span>NANGANG LALAPORT</td><td class="num">486</td><td class="num"><span class="badge bad">84%</span></td><td class="num">78.6%</td></tr>
+              <tr><td><span class="tag outlet">아울렛</span>LINKOU</td><td class="num">387</td><td class="num"><span class="badge bad">87%</span></td><td class="num">87.0%</td></tr>
+              <tr><td><span class="tag retail">리테일</span>SKM Tainan</td><td class="num">559</td><td class="num"><span class="badge warn">97%</span></td><td class="num">90.3%</td></tr>
+              <tr><td><span class="tag retail">리테일</span>MAGA CITY BANQIAO</td><td class="num">673</td><td class="num">104%</td><td class="num">93.8%</td></tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <hr class="divider">
-
-  <!-- ===== SECTION 2 ===== -->
-  <div class="page-title" id="sec2">2. 채널·아이템별 실판매출 분석 — Q1(1~3월) 대비 4월 변화</div>
-
-  <div class="container">
-    <div class="left">
-      <div class="section">
-        <div class="section-title">📊 채널별 YoY 추이 비교</div>
-        <table>
-          <tr><th>채널</th><th class="num">Q1 YoY</th><th class="num">4월 YoY</th><th class="num">방향</th></tr>
-          <tr class="highlight"><td>TW 전체</td><td class="num">116%</td><td class="num">128%</td><td class="num" style="color:#276749;">↗ 가속</td></tr>
-          <tr><td>리테일 합계</td><td class="num">119%</td><td class="num">130%</td><td class="num" style="color:#276749;">↗ 가속</td></tr>
-          <tr><td>아울렛 합계</td><td class="num">93%</td><td class="num">97%</td><td class="num" style="color:#276749;">↗ 소폭회복</td></tr>
-          <tr><td>온라인 합계</td><td class="num">123%</td><td class="num">146%</td><td class="num" style="color:#276749;">↑ 강한 가속</td></tr>
-          <tr><td>&nbsp;&nbsp;Official Online</td><td class="num">120%</td><td class="num">172%</td><td class="num" style="color:#276749;">↑ 폭발성장</td></tr>
-          <tr><td>&nbsp;&nbsp;SHOPEE</td><td class="num">167%</td><td class="num">165%</td><td class="num">→ 고성장 유지</td></tr>
-          <tr><td>&nbsp;&nbsp;MOMO</td><td class="num">96%</td><td class="num">112%</td><td class="num" style="color:#276749;">↗ 회복 전환</td></tr>
-        </table>
-        <p class="note green">✅ MOMO 회복 전환 — 3월 콘텐츠·프로모션 전략 재편 효과</p>
+    <section id="s4">
+      <h2>4. 26SS 판매율 및 과시즌 재고</h2>
+      <div class="grid3">
+        <div class="card kpi"><small>26SS 의류 판매율</small><strong>42.0%</strong><em class="good">YoY +10.0%p · WoW +1.1%p</em></div>
+        <div class="card kpi"><small>과시즌 의류 재고</small><strong>19,533K</strong><em class="good">YoY -30%</em></div>
+        <div class="card kpi"><small>W22 과시즌 소진</small><strong>531K</strong><em class="good">YoY 127% · WoW +2.9%</em></div>
       </div>
+      <table>
+        <thead><tr><th>26SS 의류 카테고리</th><th class="num">판매율</th><th class="num">WoW</th><th class="num">YoY</th><th>판단</th></tr></thead>
+        <tbody>
+          <tr><td>Outer</td><td class="num">43.7%</td><td class="num">+0.6%p</td><td class="num">+5.7%p</td><td>안정적</td></tr>
+          <tr><td>Inner / Top</td><td class="num">44.5%</td><td class="num">+1.2%p</td><td class="num">+7.0%p</td><td>가장 양호</td></tr>
+          <tr><td>Bottom</td><td class="num">37.0%</td><td class="num">+1.3%p</td><td class="num">+2.4%p</td><td>추가 소진 필요</td></tr>
+          <tr class="total"><td>26SS 의류 전체</td><td class="num">42.0%</td><td class="num">+1.1%p</td><td class="num">+10.0%p</td><td>전년 대비 개선</td></tr>
+        </tbody>
+      </table>
+    </section>
 
-      <div class="section" style="margin-top:6px;">
-        <div class="section-title">📦 아이템별 YoY 추이 비교 (4월 당월)</div>
-        <table>
-          <tr><th>아이템</th><th class="num">Q1 YoY</th><th class="num">4월 YoY</th><th class="num">방향</th></tr>
-          <tr><td>26S 의류</td><td class="num">145%</td><td class="num">146%</td><td class="num">→ 고성장 지속</td></tr>
-          <tr><td>25F 의류</td><td class="num">112%</td><td class="num">143%</td><td class="num" style="color:#276749;">↑ 회복</td></tr>
-          <tr><td>과시즌 의류</td><td class="num">107%</td><td class="num">125%</td><td class="num" style="color:#276749;">↗ 가속</td></tr>
-          <tr><td>모자</td><td class="num">127%</td><td class="num">129%</td><td class="num">→ 안정 성장</td></tr>
-          <tr><td>신발</td><td class="num">105%</td><td class="num">105%</td><td class="num">→ 보합</td></tr>
-          <tr><td>가방</td><td class="num">109%</td><td class="num">140%</td><td class="num" style="color:#276749;">↑ 강한 반등</td></tr>
-          <tr><td>기타 ACC</td><td class="num">131%</td><td class="num">125%</td><td class="num" style="color:#975a16;">↘ 소폭 둔화</td></tr>
-        </table>
-        <p class="note green">✅ 가방 109%→140% 강한 반등 — 26N BQ 신규 라인 효과</p>
+    <section id="s5">
+      <h2>5. TW-M 5월 손익 요약</h2>
+      <table>
+        <thead><tr><th>계정</th><th class="num">전년</th><th class="num">계획</th><th class="num">실적</th><th class="num">계획비</th><th class="num">전년비</th></tr></thead>
+        <tbody>
+          <tr><td>Tag 매출</td><td class="num">18,249</td><td class="num">20,909</td><td class="num">18,448</td><td class="num">88.2%</td><td class="num">101.1%</td></tr>
+          <tr><td>할인율</td><td class="num">23.7%</td><td class="num">23.7%</td><td class="num">23.9%</td><td class="num">+0.2%p</td><td class="num">+0.2%p</td></tr>
+          <tr><td>실판매출</td><td class="num">13,926</td><td class="num">15,955</td><td class="num">14,046</td><td class="num">88.0%</td><td class="num">100.9%</td></tr>
+          <tr><td>매출총이익</td><td class="num">7,630</td><td class="num">8,741</td><td class="num">7,681</td><td class="num">87.9%</td><td class="num">100.7%</td></tr>
+          <tr><td>직접비 합계</td><td class="num">5,132</td><td class="num">5,166</td><td class="num">4,954</td><td class="num">95.9%</td><td class="num">96.5%</td></tr>
+          <tr class="total"><td>직접이익</td><td class="num">2,498</td><td class="num">3,574</td><td class="num">2,727</td><td class="num">76.3%</td><td class="num">109.2%</td></tr>
+          <tr class="total"><td>직접이익률</td><td class="num">17.9%</td><td class="num">22.4%</td><td class="num">19.4%</td><td class="num">-3.0%p</td><td class="num">+1.5%p</td></tr>
+        </tbody>
+      </table>
+      <p class="note">출처: plan-vs-actual JSON의 TW-M. 금액은 보고서 표시 기준 K HKD 환산값.</p>
+    </section>
+
+    <section id="s6">
+      <h2>6. W22 주간 점검</h2>
+      <div class="grid2">
+        <div class="box red">
+          <b>W22 실적</b>
+          <ul>
+            <li>주간 매출 <b style="display:inline">2,733K</b>, WoW <b style="display:inline">-27.0%</b>.</li>
+            <li>WoW 하락: ZHONGXIAO <b style="display:inline">-80.0%</b>, SKM Tainan <b style="display:inline">-48.2%</b>, NANGANG LALAPORT <b style="display:inline">-47.8%</b>.</li>
+            <li>GLORIA OUTLET은 WoW <b style="display:inline">+0.7%</b>, 목표 달성률 <b style="display:inline">118.5%</b>로 방어.</li>
+          </ul>
+        </div>
+        <div class="box blue">
+          <b>다음 주 운영 방향</b>
+          <ul>
+            <li>우천 예상 구간은 실내 몰 중심 집객과 레인 프로모션 연계.</li>
+            <li>MOMO, Official Online, SHOPEE 과시즌 소진 기획전 강화.</li>
+            <li>아울렛 유입 유지와 저성과 리테일 매장별 회복 액션 병행.</li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="right">
-      <div class="box box-blue">
-        <div class="box-title blue">📋 Q1 대비 4월 핵심 변화 분석</div>
-        <ul>
-          <li><b>전체 116%→128% 가속:</b> 신규 3개 매장(HANSHIN TC, LALAPORT TC, NANGANG LALAPORT) 본격 가동 + 봄 시즌 26S 판매 본격화 + 온라인 채널 폭발 성장 복합 작용.</li>
-          <li><b>온라인 123%→146% 강한 가속:</b> Official Online이 134%→172%로 폭발적 성장 전환. SHOPEE 165% 고성장 지속, MOMO도 103%→112%로 회복 전환 — 3월 우려사항 해소.</li>
-          <li><b>리테일 119%→130% 가속:</b> 신규 매장 + 동일매장(METROWALK 172%, TAIPEI 101 180%) 동반 호조. METROWALK 3월 리뉴얼 후 정상 영업 효과 본격화.</li>
-          <li><b>아울렛 93%→97% 소폭 회복:</b> 정상채널 가속과 디커플링 지속 — Linkou 93%, MK TC 77% 부진. 정상가 강세 흐름이 아울렛 수요를 일부 잠식하는 구조적 패턴.</li>
-          <li><b>가방 109%→140% 강한 반등:</b> 26N BQ 신규 라인(1,073K 재고) 본격 입고 효과. 26S 판매율 70.7% 우수한 소화 속도 — 4월 BQ 카테고리 매출 642K로 가방 전체의 견인차 역할.</li>
-          <li><b>25F 의류 112%→143% 회복:</b> 가을 의류 과시즌 입고 시점에서 사전 판매 강화 효과 — 그러나 재고는 여전히 YoY 110% 증가 상태로 5~6월 집중 소진 필요.</li>
-        </ul>
+    <section id="s7">
+      <h2>7. DISCOVERY Taiwan 별도 참고</h2>
+      <div class="grid3">
+        <div class="card kpi"><small>TW-X 실판매출</small><strong>1,963K</strong><em class="good">계획비 94.8%</em></div>
+        <div class="card kpi"><small>TW-X 직접이익</small><strong>5K</strong><em class="warn">계획 8K</em></div>
+        <div class="card kpi"><small>TW-X 직접이익률</small><strong>0.2%</strong><em class="warn">계획 0.4%</em></div>
       </div>
+      <p class="note">MLB 본문과 분리한 참고 지표. 출처: plan-vs-actual JSON의 TW-X.</p>
+    </section>
 
-      <div class="section" style="margin-top:6px;">
-        <div class="section-title">📊 채널별 직접이익률 (1~4월 누적)</div>
-        <table>
-          <tr><th>채널</th><th class="num">직접이익(K)</th><th class="num">이익률</th><th class="num">YoY증감</th></tr>
-          <tr><td>리테일</td><td class="num">6,075</td><td class="num">18.2%</td><td class="num"><span class="badge-up">+3.5%p</span></td></tr>
-          <tr><td>아울렛</td><td class="num">306</td><td class="num">3.5%</td><td class="num"><span class="badge-down">-0.3%p</span></td></tr>
-          <tr><td>온라인</td><td class="num">4,632</td><td class="num">29.9%</td><td class="num"><span class="badge-up">+2.8%p</span></td></tr>
-          <tr class="highlight"><td>전체</td><td class="num">11,012</td><td class="num">19.1%</td><td class="num"><span class="badge-up">+3.4%p</span></td></tr>
-        </table>
+    <section id="s8">
+      <h2>8. 6월 Action Plan</h2>
+      <div class="grid2">
+        <div class="box orange">
+          <b>매출 회복</b>
+          <ul>
+            <li>NANGANG LALAPORT, CHUNGYO, LINKOU: 매장별 원인 분리 후 주간 회복 목표 설정.</li>
+            <li>온라인 3개 채널: 과시즌 소진형 행사와 신상품 노출을 분리 운영.</li>
+            <li>ZHONGXIAO 재오픈 효과를 인접 상권 CRM과 연결해 반복 방문으로 전환.</li>
+          </ul>
+        </div>
+        <div class="box green">
+          <b>수익성 및 재고</b>
+          <ul>
+            <li>Bottom 판매율 37.0%: 스타일별 저효율 SKU를 선별해 진열과 온라인 노출 보강.</li>
+            <li>과시즌 의류 재고 YoY -30% 흐름을 유지하되 아울렛 할인율은 주간 단위 점검.</li>
+            <li>직접이익률 19.4% 방어: 프로모션별 매출 기여와 할인 비용을 함께 관리.</li>
+          </ul>
+        </div>
       </div>
-      <div class="section" style="margin-top:6px;">
-        <div class="section-title">🌐 온라인 채널별 (1~4월 누적, K HKD)</div>
-        <table>
-          <tr><th>채널</th><th class="num">매출(K)</th><th class="num">YoY</th><th class="num">직접이익률</th></tr>
-          <tr><td>Official Online</td><td class="num">6,693</td><td class="num"><span class="badge-up">135%</span></td><td class="num">41%</td></tr>
-          <tr><td>MOMO</td><td class="num">5,184</td><td class="num"><span class="badge-up">104%</span></td><td class="num">18%</td></tr>
-          <tr><td>SHOPEE</td><td class="num">3,632</td><td class="num"><span class="badge-up">167%</span></td><td class="num">26%</td></tr>
-          <tr class="highlight"><td>온라인 합계</td><td class="num">15,509</td><td class="num"><span class="badge-up">128%</span></td><td class="num">29.9%</td></tr>
-        </table>
-        <p class="note green">✅ Official Online 직접이익률 41% — 자사몰 CRM 강화 전략 효과 확인</p>
-        <p class="note red">⚠️ MOMO 이익률 18%: 3개 채널 중 최저 — 광고선전비·온라인커미션 부담 지속</p>
-      </div>
-    </div>
-  </div>
+    </section>
 
-  <hr class="divider">
-
-  <!-- ===== SECTION 3 ===== -->
-  <div class="page-title" id="sec3">3. 5월 현황 — MTD 매출 추세 (기준일: 2026.05.12, MLB TW)</div>
-
-  <div class="five-grid">
-    <div class="trend-box"><div class="trend-label">TW 5월 MTD 실판매출</div><div class="trend-value" style="font-size:11px;">5,568K</div><div class="trend-sub up">YoY 102%</div></div>
-    <div class="trend-box"><div class="trend-label">월말 예상 매출</div><div class="trend-value" style="font-size:11px;">13,844K</div><div class="trend-sub up">목표 96%</div></div>
-    <div class="trend-box"><div class="trend-label">YTD 누적 (5/12)</div><div class="trend-value" style="font-size:11px;">65,534K</div><div class="trend-sub up">YoY 117%</div></div>
-    <div class="trend-box"><div class="trend-label">5월 MTD 할인율</div><div class="trend-value" style="font-size:11px;">20.6%</div><div class="trend-sub down">전년比 +2.0%p</div></div>
-    <div class="trend-box"><div class="trend-label">활성 매장 (5월)</div><div class="trend-value" style="font-size:11px;">19개</div><div class="trend-sub down">전년 22개</div></div>
-  </div>
-
-  <div class="container">
-    <div class="left">
-      <div class="section">
-        <div class="section-title">📊 채널별 5월 MTD (K HKD, 5/12 기준)</div>
-        <table>
-          <tr><th>채널</th><th class="num">MTD실판</th><th class="num">YoY</th><th class="num">월말예상</th><th class="num">목표比</th></tr>
-          <tr><td>리테일</td><td class="num">3,400</td><td class="num"><span class="badge-up">100%</span></td><td class="num">8,453</td><td class="num"><span class="badge-warn">~95%</span></td></tr>
-          <tr><td>아울렛</td><td class="num">818</td><td class="num"><span class="badge-up">113%</span></td><td class="num">2,034</td><td class="num"><span class="badge-up">~109%</span></td></tr>
-          <tr><td>온라인</td><td class="num">1,350</td><td class="num"><span class="badge-up">101%</span></td><td class="num">3,356</td><td class="num"><span class="badge-warn">~93%</span></td></tr>
-          <tr class="highlight"><td>TW 전체</td><td class="num">5,568</td><td class="num"><span class="badge-up">102%</span> <span class="badge-up">동매장 106.5%</span></td><td class="num">13,844</td><td class="num"><span class="badge-warn">~96%</span></td></tr>
-        </table>
-        <p class="note green">✅ 전체 MTD YoY 102%, 동매장 YoY 106.5%: 신규점 기여는 있으나 리테일 일부 점포와 온라인 둔화가 전체 성장률을 제한</p>
-      </div>
-
-      <div class="section" style="margin-top:6px;">
-        <div class="section-title">📊 주요 매장별 5월 MTD (K HKD)</div>
-        <table>
-          <tr><th>매장</th><th class="num">MTD실판</th><th class="num">YoY</th><th class="num">월말예상</th></tr>
-          <tr><td><span class="store-tag-tw">TW</span> HANSHIN ARENA</td><td class="num">516</td><td class="num"><span class="badge-up">109%</span></td><td class="num">1,283</td></tr>
-          <tr><td><span class="store-tag-out">아울렛</span> GLORIA OUTLET</td><td class="num">424</td><td class="num"><span class="badge-up">139%</span></td><td class="num">1,054</td></tr>
-          <tr><td><span class="store-tag-tw">TW</span> HANSHIN TC <span class="badge-warn">신규</span></td><td class="num">350</td><td class="num"><span class="badge-warn">신규</span></td><td class="num">869</td></tr>
-          <tr><td><span class="store-tag-tw">TW</span> TAIPEI 101</td><td class="num">316</td><td class="num"><span class="badge-up">144%</span></td><td class="num">785</td></tr>
-          <tr><td><span class="store-tag-tw">TW</span> MAGA CITY BANQIAO</td><td class="num">294</td><td class="num"><span class="badge-up">118%</span></td><td class="num">731</td></tr>
-          <tr><td><span class="store-tag-tw">TW</span> TAIMALL</td><td class="num">272</td><td class="num"><span class="badge-warn">97%</span></td><td class="num">677</td></tr>
-          <tr><td><span class="store-tag-tw">TW</span> TS MALL</td><td class="num">262</td><td class="num"><span class="badge-up">123%</span></td><td class="num">652</td></tr>
-          <tr><td><span class="store-tag-tw">TW</span> MITSUKOSHI NANJING</td><td class="num">257</td><td class="num"><span class="badge-up">113%</span></td><td class="num">639</td></tr>
-          <tr><td><span class="store-tag-tw">TW</span> LALAPORT TC <span class="badge-warn">신규</span></td><td class="num">201</td><td class="num"><span class="badge-warn">신규</span></td><td class="num">499</td></tr>
-        </table>
-      </div>
-
-      <div class="section" style="margin-top:6px;">
-        <div class="section-title">⚠️ 부진 / 확인 필요 매장 (5월 MTD)</div>
-        <table>
-          <tr><th>매장</th><th class="num">MTD실판</th><th class="num">YoY</th><th class="num">월말예상</th></tr>
-          <tr><td><span class="store-tag-out">아울렛</span> LINKOU</td><td class="num">134</td><td class="num"><span class="badge-down">66%</span></td><td class="num">333</td></tr>
-          <tr><td><span class="store-tag-tw">TW</span> NANGANG LALAPORT</td><td class="num">178</td><td class="num"><span class="badge-down">78%</span></td><td class="num">442</td></tr>
-          <tr><td><span class="store-tag-tw">TW</span> CHUNGYO</td><td class="num">168</td><td class="num"><span class="badge-down">79%</span></td><td class="num">417</td></tr>
-          <tr><td><span class="store-tag-tw">TW</span> SKM Tainan</td><td class="num">183</td><td class="num"><span class="badge-warn">93%</span></td><td class="num">454</td></tr>
-          <tr><td><span class="store-tag-tw">TW</span> TAIMALL</td><td class="num">272</td><td class="num"><span class="badge-warn">97%</span></td><td class="num">677</td></tr>
-        </table>
-        <p class="note red">⚠️ LINKOU, NANGANG LALAPORT, CHUNGYO의 역성장이 신규점·우수점 성장분을 상쇄해 전체 YoY가 102%에 머무름</p>
-      </div>
-    </div>
-
-    <div class="right">
-      <div class="box box-orange">
-        <div class="box-title orange">🔍 5월 MTD 핵심 분석</div>
-        <ul>
-          <li><b>5월 MTD 기준 YoY 102% / 동매장 YoY 106.5%:</b> 월말 예상 13,844K, 목표 대비 96% 수준 — 신규점 기여에도 일부 기존점·온라인 부진이 성장률을 낮춤.</li>
-          <li><b>리테일 YoY 100%:</b> HANSHIN ARENA, TAIPEI 101은 견조하나 NANGANG LALAPORT 78%, CHUNGYO 79%, SKM Tainan 93%가 상승분을 상쇄.</li>
-          <li><b>아울렛 YoY 113%:</b> GLORIA OUTLET 424K, MK TC Outlet 261K 중심으로 채널 내 상대적 강세.</li>
-          <li><b>온라인 YoY 101%:</b> Official Online 124%가 방어했으나 MOMO 85%, SHOPEE 94%로 전년 대비 둔화.</li>
-          <li><b>HANSHIN TC 신규 매장 안착:</b> 5월 MTD 350K, 월말 예상 869K — 신규 매장 중 성장 기여가 가장 큼.</li>
-          <li><b>할인율 20.6%:</b> 전년 대비 +2.0%p 상승, 특히 아울렛 할인율 45.6%와 리테일 +1.5%p 상승 관리 필요.</li>
-          <li><b>YTD 누적 65,534K:</b> YoY 117%로 누적 성장세는 유지 중이나, 5월 후반 트래픽/온라인 프로모션 보강 필요.</li>
-        </ul>
-      </div>
-
-      <div class="section" style="margin-top:6px;">
-        <div class="section-title">📊 5월 온라인 채널별 MTD (K HKD)</div>
-        <table>
-          <tr><th>채널</th><th class="num">MTD</th><th class="num">YoY</th><th class="num">월말예상</th></tr>
-          <tr><td>Official Online</td><td class="num">562</td><td class="num"><span class="badge-up">124%</span></td><td class="num">1,397</td></tr>
-          <tr><td>MOMO</td><td class="num">474</td><td class="num"><span class="badge-warn">85%</span></td><td class="num">1,179</td></tr>
-          <tr><td>SHOPEE</td><td class="num">314</td><td class="num"><span class="badge-warn">94%</span></td><td class="num">781</td></tr>
-          <tr class="highlight"><td>온라인 합계</td><td class="num">1,350</td><td class="num"><span class="badge-up">101%</span></td><td class="num">3,356</td></tr>
-        </table>
-        <p class="note green">✅ Official Online 124% — 온라인 내 성장 방어 채널</p>
-      </div>
-
-      <div class="section" style="margin-top:6px;">
-        <div class="section-title">📊 26S 카테고리별 YTD 판매율 (4월 말)</div>
-        <table>
-          <tr><th>카테고리</th><th class="num">YTD 판매율</th><th class="num">YoY</th><th class="num">5월 MTD 전망</th></tr>
-          <tr><td>JP (점퍼)</td><td class="num" style="color:#276749;"><b>61.7%</b></td><td class="num"><span class="badge-up">+21.0%p</span></td><td class="num"><span class="badge-down">소진단계</span></td></tr>
-          <tr><td>MT (맨투맨)</td><td class="num" style="color:#276749;"><b>58.1%</b></td><td class="num"><span class="badge-up">+11.5%p</span></td><td class="num"><span class="badge-down">소진단계</span></td></tr>
-          <tr><td>TR (반소매T)</td><td class="num"><b>60.9%</b></td><td class="num"><span class="badge-up">+11.9%p</span></td><td class="num"><span class="badge-down">소진단계</span></td></tr>
-          <tr><td>HD (후드)</td><td class="num">56.0%</td><td class="num"><span class="badge-up">+15.6%p</span></td><td class="num"><span class="badge-up">집중판매</span></td></tr>
-          <tr><td>WJ (윈드재킷)</td><td class="num">29.1%</td><td class="num"><span class="badge-up">+8.5%p</span></td><td class="num"><span class="badge-up">~140%</span></td></tr>
-          <tr><td>WP (와이드팬츠)</td><td class="num">36.7%</td><td class="num"><span class="badge-up">+5.3%p</span></td><td class="num"><span class="badge-up">~135%</span></td></tr>
-          <tr><td>SP (숏팬츠)</td><td class="num">23.7%</td><td class="num"><span class="badge-up">+12.7%p</span></td><td class="num"><span class="badge-up">~150%</span></td></tr>
-          <tr><td>SK (스커트)</td><td class="num">23.1%</td><td class="num"><span class="badge-up">+5.7%p</span></td><td class="num"><span class="badge-up">~145%</span></td></tr>
-        </table>
-        <p class="note">JP·MT·TR: 60%+ 우수 소화율 도달 — 6월 이후 추가 입고/마크다운 검토<br>WJ·WP·SP·SK: 봄 여름 수요 본격화로 5월 가속 — 입고 물량 점검 필요</p>
-      </div>
-    </div>
-  </div>
-
-  <hr class="divider">
-
-  <!-- ===== SECTION 4 ===== -->
-  <div class="page-title" id="sec4">4. 할인율 · 재고 분석 (4월 말 기준)</div>
-
-  <div class="container">
-    <div class="left">
-      <div class="box box-green">
-        <div class="box-title green">✅ 할인율 핵심 성과 (4월)</div>
-        <ul>
-          <li><b>전체 할인율 20.0% (YoY -1.5%p):</b> 누적 20.1% (YoY -3.6%p) — 4개월 연속 개선 기조 유지</li>
-          <li><b>리테일 채널 12.0% (YoY +1.3%p):</b> 신규 매장 오픈 프로모션 영향으로 소폭 상승</li>
-          <li><b>온라인 19.8% (YoY -3.0%p):</b> Official Online 21.1% (-1.7%p), SHOPEE 13.0% (-4.8%p) 개선</li>
-          <li><b>26S 의류 할인율 12.2% (YoY -1.2%p):</b> 신상 정가 판매 비중 유지</li>
-          <li><b>모자 할인율 11.9% (YoY -0.6%p):</b> 26N CP모자 신규 입고에도 할인율 안정</li>
-          <li><b>아울렛 43.0% (전년比 +0.3%p):</b> 정상채널 강세로 아울렛 매출 부진 → 할인율 소폭 상승</li>
-        </ul>
-      </div>
-      <div class="section" style="margin-top:6px;">
-        <div class="section-title">🏷️ 채널별 할인율 (당월/누적)</div>
-        <table>
-          <tr><th>채널</th><th class="num">4월</th><th class="num">YoY</th><th class="num">YTD누적</th><th class="num">YoY</th></tr>
-          <tr class="highlight"><td>전체</td><td class="num">20.0%</td><td class="num"><span class="badge-up">-1.5%p</span></td><td class="num">20.1%</td><td class="num"><span class="badge-up">-3.6%p</span></td></tr>
-          <tr><td>리테일</td><td class="num">12.0%</td><td class="num"><span class="badge-down">+1.3%p</span></td><td class="num">10.4%</td><td class="num"><span class="badge-up">-1.1%p</span></td></tr>
-          <tr><td>아울렛</td><td class="num">43.0%</td><td class="num"><span class="badge-down">+0.3%p</span></td><td class="num">44.0%</td><td class="num"><span class="badge-up">-0.8%p</span></td></tr>
-          <tr><td>온라인</td><td class="num">19.8%</td><td class="num"><span class="badge-up">-3.0%p</span></td><td class="num">19.8%</td><td class="num"><span class="badge-up">-5.3%p</span></td></tr>
-        </table>
-      </div>
-
-      <div class="section" style="margin-top:6px;">
-        <div class="section-title">🏷️ 아이템별 할인율 (4월)</div>
-        <table>
-          <tr><th>아이템</th><th class="num">할인율</th><th class="num">YoY</th></tr>
-          <tr><td>모자 (전체)</td><td class="num">11.9%</td><td class="num"><span class="badge-up">-0.6%p</span></td></tr>
-          <tr><td>26S 의류</td><td class="num">12.2%</td><td class="num"><span class="badge-up">-1.2%p</span></td></tr>
-          <tr><td>25F 의류</td><td class="num">21.9%</td><td class="num"><span class="badge-up">-5.4%p</span></td></tr>
-          <tr><td>과시즌 의류</td><td class="num">40.2%</td><td class="num"><span class="badge-up">-0.8%p</span></td></tr>
-          <tr><td>신발</td><td class="num">19.7%</td><td class="num"><span class="badge-up">-5.3%p</span></td></tr>
-          <tr><td>가방</td><td class="num">24.9%</td><td class="num"><span class="badge-up">-0.5%p</span></td></tr>
-          <tr><td style="color:#c53030;">기타 ACC</td><td class="num" style="color:#c53030;">46.4%</td><td class="num"><span class="badge-down">+33.7%p</span></td></tr>
-        </table>
-        <p class="note red">⚠️ 기타 ACC 할인율 46.4% (+33.7%p): SO(양말) 24N 1,241K 재고 집중 할인 영향</p>
-      </div>
-    </div>
-
-    <div class="right">
-      <div class="box box-red">
-        <div class="box-title red">⚠️ 재고 핵심 리스크 (4월 말)</div>
-        <ul>
-          <li><b>과시즌S 합계 22,050K (YoY 76%):</b> 1년차(25S) 13,228K + 2년차(24S) 8,822K — 감소세이나 아울렛 3개로는 소진 속도 한계</li>
-          <li><b>과시즌F 합계 13,333K (YoY 71%):</b> 1년차 6,978K + 2년차(23F) 6,355K — 24F는 대폭 감소(46%), 23F는 YoY 181% 급증</li>
-          <li><b>25F 의류 재고 19,331K (YoY 110%):</b> 전 카테고리 중 유일하게 증가 — 가을 진입 전 5~7월 집중 소진 시급</li>
-          <li><b>26S 의류 27,396K (YoY 80%):</b> 입고 YoY 94% 절감, 판매율 32.8%로 소화 양호</li>
-          <li><b>모자 24,744K (YoY 91%):</b> 26N CP모자 신규 입고로 재고 증가 — 고정가 전략 유지 관건</li>
-          <li><b>신발 30,556K (YoY 84%):</b> 26N 신규 + 25N 기존 병렬 — 다년도 재고 혼재 지속</li>
-          <li><b>가방 7,922K (YoY 66%):</b> 감소 중이나 26N BQ 입고 + 과시즌 84% — 24N~22N 구형재고 집중 처분 필요</li>
-        </ul>
-      </div>
-
-      <div class="section" style="margin-top:6px;">
-        <div class="section-title">📦 재고 세그먼트 요약 (4월 말 TAG, K HKD)</div>
-        <table>
-          <tr><th>구분</th><th class="num">재고(K)</th><th class="num">YoY</th><th class="num">비고</th></tr>
-          <tr><td>26S 당시즌 의류</td><td class="num">27,396</td><td class="num"><span class="badge-up">80%↓</span></td><td class="num">판매율 32.8%</td></tr>
-          <tr><td style="color:#c53030;">25F 의류</td><td class="num" style="color:#c53030;">19,331</td><td class="num"><span class="badge-down">110%↑</span></td><td class="num" style="color:#c53030;">집중소진필요</td></tr>
-          <tr><td>과시즌S 1년차(25S)</td><td class="num">13,228</td><td class="num"><span class="badge-up">67%↓</span></td><td class="num">아울렛 집중소진</td></tr>
-          <tr><td>과시즌S 2년차(24S)</td><td class="num">8,822</td><td class="num"><span class="badge-up">96%</span></td><td class="num">정체 지속</td></tr>
-          <tr><td>과시즌F 1년차(24F)</td><td class="num">6,978</td><td class="num"><span class="badge-up">46%↓</span></td><td class="num">대폭 감소</td></tr>
-          <tr><td style="color:#c53030;">과시즌F 2년차(23F)</td><td class="num" style="color:#c53030;">6,355</td><td class="num"><span class="badge-down">181%↑</span></td><td class="num" style="color:#c53030;">2년차 누적 증가</td></tr>
-          <tr><td>신발 (26N+25N+24N+이전)</td><td class="num">30,556</td><td class="num"><span class="badge-up">84%↓</span></td><td class="num">다년도 혼재</td></tr>
-          <tr><td>모자 (전시즌)</td><td class="num">24,744</td><td class="num"><span class="badge-up">91%↓</span></td><td class="num">26N CP모자 신규</td></tr>
-          <tr><td>가방</td><td class="num">7,922</td><td class="num"><span class="badge-up">66%↓</span></td><td class="num">26N BQ 신규+과시즌</td></tr>
-        </table>
-        <p class="note red">⚠️ 25F 의류 YoY 110%: 의류 카테고리 중 유일한 증가 — 5~7월 집중 소진 계획 시급</p>
-      </div>
-    </div>
-  </div>
-
-  <hr class="divider">
-
-  <!-- ===== SECTION 5 ===== -->
-  <div class="page-title" id="sec5">5. 매장효율성 · 직접이익 분석 (1~4월 누적)</div>
-
-  <div class="four-grid">
-    <div class="trend-box"><div class="trend-label">전체 평당매출 (누적)</div><div class="trend-value">631</div><div class="trend-sub up">HKD/평/일 YoY 123%</div></div>
-    <div class="trend-box"><div class="trend-label">리테일 평당매출 (누적)</div><div class="trend-value">620</div><div class="trend-sub up">HKD/평/일 YoY 132%</div></div>
-    <div class="trend-box"><div class="trend-label">아울렛 평당매출 (누적)</div><div class="trend-value">675</div><div class="trend-sub down">HKD/평/일 YoY 94%</div></div>
-    <div class="trend-box"><div class="trend-label">운영 매장 (4월)</div><div class="trend-value">17개</div><div class="trend-sub up">전년 15개 (+2)</div></div>
-  </div>
-
-  <div class="container">
-    <div class="left">
-      <div class="section">
-        <div class="section-title">🏆 우수 매장 — 리테일 직접이익 TOP (1~4월 누적, K HKD)</div>
-        <table>
-          <tr><th>매장</th><th class="num">평수</th><th class="num">직접이익(K)</th><th class="num">이익률</th><th class="num">YoY</th></tr>
-          <tr><td><span class="store-tag-tw">TW</span> HANSHIN ARENA</td><td class="num">38평</td><td class="num">1,000</td><td class="num">19.7%</td><td class="num"><span class="badge-up">187%</span></td></tr>
-          <tr><td><span class="store-tag-tw">TW</span> Nanfang TS MALL</td><td class="num">30평</td><td class="num">653</td><td class="num">26.8%</td><td class="num"><span class="badge-up">145%</span></td></tr>
-          <tr><td><span class="store-tag-tw">TW</span> TAIMALL <span class="badge-warn">리뉴얼 3/19~4/2</span></td><td class="num">47평</td><td class="num">601</td><td class="num">20.7%</td><td class="num"><span class="badge-up">127%</span></td></tr>
-          <tr><td><span class="store-tag-tw">TW</span> MITSUKOSHI NANJING</td><td class="num">30평</td><td class="num">580</td><td class="num">20.6%</td><td class="num"><span class="badge-up">130%</span></td></tr>
-          <tr><td><span class="store-tag-tw">TW</span> BANQIAO MEGACITY</td><td class="num">24평</td><td class="num">577</td><td class="num">19.9%</td><td class="num"><span class="badge-up">121%</span></td></tr>
-          <tr><td><span class="store-tag-tw">TW</span> TAIPEI 101</td><td class="num">19평</td><td class="num">537</td><td class="num">17.3%</td><td class="num"><span class="badge-up">133%</span></td></tr>
-          <tr><td><span class="store-tag-tw">TW</span> METROWALK</td><td class="num">36평</td><td class="num">480</td><td class="num">18.7%</td><td class="num"><span class="badge-up">155%</span></td></tr>
-          <tr><td><span class="store-tag-tw">TW</span> LALAPORT TAICHUNG <span class="badge-warn">신규</span></td><td class="num">40평</td><td class="num">392</td><td class="num">15.9%</td><td class="num"><span class="badge-warn">신규</span></td></tr>
-          <tr><td><span class="store-tag-tw">TW</span> CHUNGYO TC</td><td class="num">38평</td><td class="num">375</td><td class="num">15.8%</td><td class="num"><span class="badge-up">119%</span></td></tr>
-          <tr><td><span class="store-tag-tw">TW</span> SKM TAINAN</td><td class="num">26평</td><td class="num">323</td><td class="num">15.5%</td><td class="num"><span class="badge-up">136%</span></td></tr>
-          <tr><td><span class="store-tag-tw">TW</span> NANGANG LALAPORT <span class="badge-warn">신규</span></td><td class="num">47평</td><td class="num">326</td><td class="num">15.4%</td><td class="num"><span class="badge-warn">신규</span></td></tr>
-          <tr><td><span class="store-tag-tw">TW</span> HANSHIN TC <span class="badge-warn">신규 4/10~</span></td><td class="num">33평</td><td class="num">101</td><td class="num">15.0%</td><td class="num"><span class="badge-warn">신규</span></td></tr>
-        </table>
-        <p class="note green">✅ 흑자매장 16/17 (94%) — ZhongXiao SOGO만 -26K(폐점 손익) / 신규 3개 매장 모두 흑자 안착</p>
-        <p class="note">📌 <b>4월 매장 운영 특이사항:</b> ZHONGXIAO(로드) 리뉴얼 4/21~4/29(9일 휴업), TAIMALL 리뉴얼 3/19~4/2(15일 휴업), HANSHIN TC 신규오픈 4/10~(약 21일 영업)</p>
-      </div>
-    </div>
-
-    <div class="right">
-      <div class="section">
-        <div class="section-title">⚠️ 주의 매장 (1~4월 누적)</div>
-        <table>
-          <tr><th>매장</th><th class="num">평수</th><th class="num">직접이익(K)</th><th class="num">이익률</th><th class="num">비고</th></tr>
-          <tr style="background:#fff5f5;"><td><span class="store-tag-tw">TW</span> ZHONGXIAO SOGO (폐점)</td><td class="num">32평</td><td class="num" style="color:#c53030;">-26</td><td class="num" style="color:#c53030;">적자</td><td class="num"><span class="badge-down">YoY 75%</span></td></tr>
-          <tr style="background:#fff5f5;"><td><span class="store-tag-tw">TW</span> ZHONGXIAO (1호점) <span class="badge-warn">리뉴얼 4/21~29</span></td><td class="num">56평</td><td class="num">157</td><td class="num">7.4%</td><td class="num"><span class="badge-warn">9일 휴업</span></td></tr>
-          <tr style="background:#fffaf0;"><td><span class="store-tag-out">아울렛</span> LINKOU</td><td class="num">32평</td><td class="num">76</td><td class="num">4.3%</td><td class="num"><span class="badge-down">YoY 81%</span></td></tr>
-          <tr style="background:#fffaf0;"><td><span class="store-tag-out">아울렛</span> MK TC OUTLET</td><td class="num">33평</td><td class="num">148</td><td class="num">5.8%</td><td class="num"><span class="badge-down">YoY 90%</span></td></tr>
-          <tr style="background:#fffaf0;"><td><span class="store-tag-out">아울렛</span> GLORIA OUTLET</td><td class="num">47평</td><td class="num">83</td><td class="num">1.8%</td><td class="num"><span class="badge-warn">할인율 45%</span></td></tr>
-        </table>
-        <p class="note red">⚠️ ZHONGXIAO 56평(이익률 7.4%) — 가장 큰 면적 대비 효율 가장 낮음. 4월 매출 347K(YoY 104%)로 회복 미흡.</p>
-      </div>
-
-      <div class="box box-blue" style="margin-top:6px;">
-        <div class="box-title blue">📊 매장 효율성 시사점</div>
-        <ul>
-          <li><b>소형(19~30평) 벤치마크:</b> TAIPEI 101(19평, 평당효율 43K)·Nanfang TS Mall(30평, 이익률 26.8%) — 소형 프리미엄 입지 모델 검증</li>
-          <li><b>신규 3개 매장 BEP 조기 달성:</b> LALAPORT TC 15.9%, NANGANG 15.4%, HANSHIN TC 15.0% — 출점 4개월차 흑자 안착 매우 고무적</li>
-          <li><b>HANSHIN TC 4/10 신규오픈 21일 영업으로 101K 직접이익:</b> 단축 영업기간 감안 시 5월 정상 운영부터 본격 기여 예상 — 한 달 환산 ~145K로 신규 매장 중 최고 효율</li>
-          <li><b>TAIMALL 리뉴얼(3/19~4/2, 15일 휴업) 영향:</b> 4월 매출 664K(YoY 154%)로 정상 영업기간 단축에도 강한 회복 — 5월 정상 운영 시 추가 성장 가시권</li>
-          <li><b>METROWALK 모델 확산:</b> 36평 매장이 3월 리뉴얼 후 4월 이익률 18.7%, YoY 155%로 급성장 — 동일 평형 매장 벤치마킹</li>
-          <li><b>아울렛 채널 이익률 1.8~5.8%:</b> 정상채널(15~27%) 대비 현저히 낮은 구조 — 아울렛 전용 상품 라인 검토</li>
-          <li><b>ZHONGXIAO 56평 효율 개선 시급:</b> 4/21~29 리뉴얼 9일 휴업 반영해도 56평 면적 대비 7.4% — 고마진 상품 확대 및 VIP 체험공간 조성, 5월 리오픈 효과 모니터링</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <hr class="divider">
-
-  <!-- ===== SECTION 6 ===== -->
-  <div class="page-title" id="sec6">6. 영업비 분석 (1~4월 누적)</div>
-
-  <div class="container">
-    <div class="left">
-      <div class="section">
-        <div class="section-title">💼 영업비 상세 (누적 5,281K, YoY 133%)</div>
-        <table>
-          <tr><th>항목</th><th class="num">누적(K)</th><th class="num">비중</th><th class="num">YoY</th><th class="num">매출비율</th></tr>
-          <tr class="highlight"><td>합계</td><td class="num">5,281</td><td class="num">100%</td><td class="num"><span class="badge-down">133%↑</span></td><td class="num">9.2%</td></tr>
-          <tr><td>급여</td><td class="num">2,082</td><td class="num">39.4%</td><td class="num"><span class="badge-down">127%↑</span></td><td class="num">3.6%</td></tr>
-          <tr><td>마케팅비</td><td class="num">1,175</td><td class="num">22.2%</td><td class="num"><span class="badge-down">144%↑</span></td><td class="num">2.0%</td></tr>
-          <tr><td>&nbsp;&nbsp;└ CREW</td><td class="num">390</td><td class="num">7.4%</td><td class="num"><span class="badge-down">186%↑</span></td><td class="num">—</td></tr>
-          <tr><td>지급수수료</td><td class="num">1,028</td><td class="num">19.5%</td><td class="num"><span class="badge-down">190%↑</span></td><td class="num">1.8%</td></tr>
-          <tr><td>&nbsp;&nbsp;└ 재고조정</td><td class="num">700</td><td class="num">13.3%</td><td class="num"><span class="badge-down">235%↑</span></td><td class="num">—</td></tr>
-          <tr><td>&nbsp;&nbsp;└ 면허/등록비</td><td class="num">120</td><td class="num">2.3%</td><td class="num"><span class="badge-down">461%↑</span></td><td class="num">—</td></tr>
-          <tr><td>&nbsp;&nbsp;└ 전문가수수료</td><td class="num">135</td><td class="num">2.6%</td><td class="num"><span class="badge-up">72%</span></td><td class="num">—</td></tr>
-          <tr><td>기타 영업비</td><td class="num">996</td><td class="num">18.9%</td><td class="num"><span class="badge-up">102%</span></td><td class="num">1.7%</td></tr>
-          <tr><td>&nbsp;&nbsp;└ 임차료</td><td class="num">327</td><td class="num">6.2%</td><td class="num"><span class="badge-up">101%</span></td><td class="num">—</td></tr>
-          <tr><td>&nbsp;&nbsp;└ 물류비</td><td class="num">157</td><td class="num">3.0%</td><td class="num"><span class="badge-down">352%↑</span></td><td class="num">—</td></tr>
-        </table>
-      </div>
-
-      <div class="section" style="margin-top:6px;">
-        <div class="section-title">🏢 TW Office 인건비 상세 (4월 당월, K HKD)</div>
-        <table>
-          <tr><th>항목</th><th class="num">전년</th><th class="num">당월</th><th class="num">YoY</th><th>Remark</th></tr>
-          <tr><td>기본급</td><td class="num">231</td><td class="num">279</td><td class="num"><span class="badge-up">121%</span></td><td>인원 확대(+2명) 반영, 인당 기본급 정상 증가</td></tr>
-          <tr style="background:#fff5f5;"><td>인센</td><td class="num">—</td><td class="num">659</td><td class="num"><span class="badge-down">신규</span></td><td style="color:#c53030;">전년 3월 358K 반영분 등 누적 일시 반영</td></tr>
-          <tr><td>상여</td><td class="num">19</td><td class="num">21</td><td class="num"><span class="badge-up">107%</span></td><td>정상 범위</td></tr>
-          <tr><td>야근수당</td><td class="num">1</td><td class="num">16</td><td class="num"><span class="badge-down">1,600%↑</span></td><td>리뉴얼·신규오픈 집중 영향</td></tr>
-          <tr><td>Pension</td><td class="num">14</td><td class="num">16</td><td class="num"><span class="badge-up">120%</span></td><td>기본급 증가 연동</td></tr>
-          <tr class="highlight"><td>인건비 합계</td><td class="num">265</td><td class="num">992</td><td class="num"><span class="badge-down">374%↑</span></td><td>인센티브 일시 반영 主요인</td></tr>
-          <tr><td>인원수</td><td class="num">16명</td><td class="num">18명</td><td class="num"><span class="badge-up">113%</span></td><td>매장 확장 대응 +2명</td></tr>
-          <tr><td>인당 기본급</td><td class="num">14.5</td><td class="num">15.5</td><td class="num"><span class="badge-up">107%</span></td><td>정상 인상 수준</td></tr>
-        </table>
-        <p class="note red">⚠️ 인건비 합계 YoY 374%는 인센티브(659K, 전년 3월 358K 반영분) 일시 회계 처리 효과 — <b>인센티브 제외 시 인건비 YoY 약 126%</b>로 인원 증가(+13%) 및 기본급 인상(+7%) 수준의 합리적 증가</p>
-      </div>
-    </div>
-
-    <div class="right">
-      <div class="box box-red">
-        <div class="box-title red">⚠️ 영업비 리스크 항목</div>
-        <ul>
-          <li><b>영업비 YoY 133%:</b> 매출 YoY 119% 초과 — 비용 성장이 매출 성장 추월 지속 (영업비율 8.2%→9.2%, +1.0%p)</li>
-          <li><b>4월 당월 급여 YoY 316% (1,044K) — TW Office 인센티브 일시 반영 영향:</b> Office 인건비 265K→992K(YoY 374%) 급증, 주요 원인은 인센티브 659K (전년 3월 358K 반영분 누적). 기본급은 231K→279K(YoY 121%)로 정상 범위, 인원수 16명→18명(+2명), 인당 기본급 14.5K→15.5K(YoY 107%)로 구조적 인건비 부담은 제한적</li>
-          <li><b>인센티브 회계 처리 효과 제거 시 실질 급여 YoY ~120%:</b> 인센티브(659K) 차감 시 정상 인건비 증가율은 매장 확장(+2명) 수준으로 합리적 — 일회성 vs 경상비 분리 분석 필요</li>
-          <li><b>재고조정 235% 급증(+406K):</b> 23FW Write-off에 따른 일시적 비용 — 23F 2년차 재고 6,355K(YoY 181%) 추가 발생 우려</li>
-          <li><b>면허/등록비 461% 급증(+94K):</b> Cegid 시스템 이전 비용 + 신규 매장 등록비 — 시스템 전환 완료 후 감소 예상</li>
-          <li><b>CREW 마케팅비 186% 증가(+181K):</b> Karina 글로벌 캠페인 영향(약 90~100% 증가) — 메인방송사 3곳 인터뷰 및 뉴스 보도 성공으로 정성적 ROI 확보</li>
-          <li><b>물류비 4월 당월 1,123% 급증:</b> MLB 정품택 교체 관련 1회성 비용 — 5월 정상화 여부 모니터링</li>
-        </ul>
-      </div>
-      <div class="box box-green" style="margin-top:6px;">
-        <div class="box-title green">✅ 비용 효율화 성과</div>
-        <ul>
-          <li><b>전문가수수료 YoY 72%(-52K):</b> 외부 컨설팅 의존도 감소 — 내재화 효과</li>
-          <li><b>임차료 YoY +1%(안정적):</b> 신규 매장 임대 협상 효과로 BASE RENT 안정</li>
-          <li><b>직접비율 35.5%(전년 36.9%, -1.4%p):</b> 임차료·물류비 효율화 기여</li>
-          <li><b>매출총이익률 54.6% (전년 52.5%, +2.1%p):</b> 할인율 개선 + 상품 믹스 개선 효과</li>
-        </ul>
-      </div>
-      <div class="section" style="margin-top:6px;">
-        <div class="section-title">📊 직접비 요약 (1~4월 누적, YoY 114%)</div>
-        <table>
-          <tr><th>항목</th><th class="num">금액(K)</th><th class="num">매출비율</th><th class="num">전년比</th></tr>
-          <tr><td>임차료</td><td class="num">7,742</td><td class="num">13.5%</td><td class="num"><span class="badge-up">-0.7%p</span></td></tr>
-          <tr><td>급여</td><td class="num">3,165</td><td class="num">5.5%</td><td class="num"><span class="badge-up">-0.7%p</span></td></tr>
-          <tr><td>광고선전비</td><td class="num">1,544</td><td class="num">2.7%</td><td class="num"><span class="badge-up">-0.0%p</span></td></tr>
-          <tr><td>온라인커미션</td><td class="num">1,458</td><td class="num">2.5%</td><td class="num"><span class="badge-down">+0.2%p</span></td></tr>
-          <tr><td>물류비</td><td class="num">2,538</td><td class="num">4.4%</td><td class="num"><span class="badge-up">-0.4%p</span></td></tr>
-          <tr class="highlight"><td>합계</td><td class="num">20,432</td><td class="num">35.5%</td><td class="num"><span class="badge-up">-1.4%p</span></td></tr>
-        </table>
-      </div>
-    </div>
-  </div>
-
-  <hr class="divider">
-
-  <!-- ===== SECTION 7: DISCOVERY ===== -->
-  <div class="page-title" id="sec7">7. DISCOVERY 브랜드 현황 (대만, 4월 당월)</div>
-
-  <div class="kpi-grid" style="grid-template-columns:repeat(5,1fr);">
-    <div class="kpi-box"><div class="kpi-label">실판매출 (당월)</div><div class="kpi-value">1,365K</div><div class="kpi-change up">YoY 348%</div></div>
-    <div class="kpi-box"><div class="kpi-label">영업이익 (당월)</div><div class="kpi-value" style="color:#c53030;">-264K</div><div class="kpi-change down">이익률 -20.3%</div></div>
-    <div class="kpi-box"><div class="kpi-label">직접이익 (당월)</div><div class="kpi-value" style="color:#c53030;">-187K</div><div class="kpi-change down">이익률 -14.4%</div></div>
-    <div class="kpi-box"><div class="kpi-label">누적 영업이익</div><div class="kpi-value" style="color:#276749;">74K</div><div class="kpi-change up">이익률 0.9% 흑자전환</div></div>
-    <div class="kpi-box"><div class="kpi-label">평당매출 (당월)</div><div class="kpi-value">367</div><div class="kpi-change up">HKD/평/일 YoY 127%</div></div>
-  </div>
-
-  <div class="container">
-    <div class="left">
-      <div class="box box-red">
-        <div class="box-title red">⚠️ DISCOVERY 핵심 이슈 (4월 당월)</div>
-        <ul>
-          <li><b>오프라인 4개 매장 전체 적자 (-272K):</b> SKM A11 -71K · SOGO Garden City -75K · SKM Taichung -118K · Hanshin TC(4월 신규) -8K — 흑자 매장 0개 지속</li>
-          <li><b>오프라인 직접이익률 -32.8%:</b> 매출 869K vs 직접비 749K — 3월(-95.2%) 대비 큰 개선이나 여전히 적자, BEP 미달</li>
-          <li><b>감가상각비 매출비율 15.3% (+5.3%p YoY):</b> 신규 매장 초기 투자 상각 집중 — D05 Hanshin TC 신규 오픈으로 추가 부담</li>
-          <li><b>과시즌S 재고 8,165K (YoY 12,861% 급증):</b> 25S 1년차 8,137K — 사실상 신규 발생 재고, 5~6월 긴급 소진 계획 필수</li>
-          <li><b>25F 재고 6,546K (YoY 667% 급증):</b> 가을시즌 진입 전 사전 입고 증가 — 의류 재고 총 28,537K(YoY 163%) 부담 가중</li>
-          <li><b>온라인 할인율 23.3% (YoY +9.5%p):</b> MOMO 의존 프로모션 강화로 할인율 급상승 — MLB 대만 대비 역방향, 이익률 압박</li>
-        </ul>
-      </div>
-
-      <div class="section" style="margin-top:6px;">
-        <div class="section-title">📊 채널별 손익 요약 (4월 당월, K HKD)</div>
-        <table>
-          <tr><th>채널</th><th class="num">실판매출</th><th class="num">YoY</th><th class="num">직접비율</th><th class="num">직접이익</th><th class="num">직접이익률</th></tr>
-          <tr class="highlight"><td>전체</td><td class="num">1,365</td><td class="num"><span class="badge-up">348%</span></td><td class="num">70.3%</td><td class="num" style="color:#c53030;">-187</td><td class="num" style="color:#c53030;">-14.4%</td></tr>
-          <tr><td>오프라인</td><td class="num">869</td><td class="num"><span class="badge-up">410%</span></td><td class="num" style="color:#c53030;">90.5%</td><td class="num" style="color:#c53030;">-272</td><td class="num" style="color:#c53030;">-32.8%</td></tr>
-          <tr><td>온라인</td><td class="num">495</td><td class="num"><span class="badge-up">274%</span></td><td class="num">34.8%</td><td class="num" style="color:#276749;">84</td><td class="num" style="color:#276749;">17.9%</td></tr>
-        </table>
-        <p class="note red">⚠️ 오프라인 직접비율 90.5%: 임차료 21.8% + 감가상각비 24.1% + 급여 18.8% — 고정비 구조가 매출 대비 과도</p>
-      </div>
-
-      <div class="section" style="margin-top:6px;">
-        <div class="section-title">🏪 오프라인 매장별 직접이익 (1~4월 누적, K HKD)</div>
-        <table>
-          <tr><th>매장</th><th class="num">평수</th><th class="num">직접이익</th><th class="num">이익률</th><th class="num">비고</th></tr>
-          <tr style="background:#fff5f5;"><td><span class="store-tag-dx">DX</span> D01 SKM A11</td><td class="num">24.5평</td><td class="num" style="color:#c53030;">-71</td><td class="num" style="color:#c53030;">~-7%</td><td class="num"><span class="badge-warn">YoY 108% 개선중</span></td></tr>
-          <tr style="background:#fff5f5;"><td><span class="store-tag-dx">DX</span> D03 SKM TAICHUNG</td><td class="num">24.5평</td><td class="num" style="color:#c53030;">-118</td><td class="num" style="color:#c53030;">~-12%</td><td class="num"><span class="badge-warn">25.10 정상가동</span></td></tr>
-          <tr style="background:#fff5f5;"><td><span class="store-tag-dx">DX</span> D04 SOGO GARDEN CITY</td><td class="num">30평</td><td class="num" style="color:#c53030;">-75</td><td class="num" style="color:#c53030;">~-25%</td><td class="num"><span class="badge-warn">저성장 매장</span></td></tr>
-          <tr style="background:#fff5f5;"><td><span class="store-tag-dx">DX</span> D05 HANSHIN TC <span class="badge-warn">신규 4월</span></td><td class="num">—</td><td class="num" style="color:#c53030;">-8</td><td class="num" style="color:#c53030;">~-3%</td><td class="num">첫달 314K 강한출발</td></tr>
-          <tr class="highlight"><td>오프라인 누적</td><td class="num">~79평</td><td class="num" style="color:#c53030;">-462</td><td class="num" style="color:#c53030;">-9.8%</td><td class="num"><span class="badge-down">흑자 0개</span></td></tr>
-        </table>
-        <p class="note red">⚠️ D04 SOGO Garden City 이익률 -25% 최악 — 월평균 99K 수준으로 매장 운영 효율성 점검 필요</p>
-        <p class="note green">✅ D05 Hanshin TC 신규 첫달 314K 강한 출발 — 5월 정상 영업 시 흑자 가시권</p>
-      </div>
-    </div>
-
-    <div class="right">
-      <div class="box box-green">
-        <div class="box-title green">✅ DISCOVERY 긍정 지표 & 온라인 성과</div>
-        <ul>
-          <li><b>누적 영업이익 74K (이익률 0.9%) 흑자 유지:</b> 온라인 강세로 누적 기준 흑자 전환 성공</li>
-          <li><b>온라인 전체 YoY 274% (비중 36%):</b> 91APP 265% · MOMO 284% 동반 고성장</li>
-          <li><b>온라인 채널 2개 모두 흑자:</b> 91APP 직접이익 48K(이익률 21%) · MOMO 36K(15%)</li>
-          <li><b>26S 의류 판매율 15.6% (+10.3%p YoY):</b> RS 446% · WJ 243% · TS 626% — 26S 신상 카테고리 본격 판매 시작</li>
-          <li><b>D05 Hanshin TC 4월 신규오픈 314K:</b> 신규 매장 중 최고 첫달 매출 — 모델 표준화 추진 가능</li>
-          <li><b>가방 YoY 362%:</b> 4월 152K 매출, 신발 124K(YoY 264%) — ACC 전 카테고리 강세</li>
-        </ul>
-      </div>
-
-      <div class="section" style="margin-top:6px;">
-        <div class="section-title">🌐 온라인 채널별 상세 (4월 당월, K HKD)</div>
-        <table>
-          <tr><th>채널</th><th class="num">매출(K)</th><th class="num">YoY</th><th class="num">직접비(K)</th><th class="num">직접이익(K)</th><th class="num">직접이익률</th></tr>
-          <tr><td><span class="store-tag-ol">91APP</span> 자사몰</td><td class="num">231</td><td class="num"><span class="badge-up">265%</span></td><td class="num">79</td><td class="num" style="color:#276749;">48</td><td class="num" style="color:#276749;">21%</td></tr>
-          <tr><td><span class="store-tag-ol">MOMO</span></td><td class="num">240</td><td class="num"><span class="badge-up">284%</span></td><td class="num">85</td><td class="num" style="color:#276749;">36</td><td class="num" style="color:#276749;">15%</td></tr>
-          <tr class="highlight"><td>온라인 합계</td><td class="num">495</td><td class="num"><span class="badge-up">274%</span></td><td class="num">164</td><td class="num" style="color:#276749;">84</td><td class="num" style="color:#276749;">17.9%</td></tr>
-        </table>
-        <p class="note green">✅ 91APP 이익률 21% vs MOMO 15% — 자사몰 원가관리 우수 (91APP 45.0% vs MOMO 49.6%)</p>
-      </div>
-
-      <div class="section" style="margin-top:6px;">
-        <div class="section-title">📦 4월 말 재고 현황 & 26S 판매율</div>
-        <table>
-          <tr><th>구분</th><th class="num">금액/판매율</th><th class="num">YoY</th><th class="num">비고</th></tr>
-          <tr><td>전체 기말재고 (TAG)</td><td class="num">28,537K</td><td class="num"><span class="badge-down">163%↑</span></td><td class="num">의류 부담 가중</td></tr>
-          <tr><td>26S 의류 재고</td><td class="num">6,850K</td><td class="num"><span class="badge-up">59%↓</span></td><td class="num">판매율 15.6%</td></tr>
-          <tr><td style="color:#c53030;">25F 의류 재고</td><td class="num" style="color:#c53030;">6,546K</td><td class="num"><span class="badge-down">667%↑</span></td><td class="num" style="color:#c53030;">사전입고 과다</td></tr>
-          <tr><td style="color:#c53030;">과시즌S(25S) 재고</td><td class="num" style="color:#c53030;">8,137K</td><td class="num"><span class="badge-down">12,861%↑</span></td><td class="num" style="color:#c53030;">사실상 신규발생</td></tr>
-          <tr><td>과시즌F(24F) 재고</td><td class="num">387K</td><td class="num">—</td><td class="num">소규모</td></tr>
-          <tr><td>ACC 재고주수</td><td class="num">66.1주</td><td class="num"><span class="badge-up">147.5주↓</span></td><td class="num">대폭 개선</td></tr>
-          <tr><td>26S RS 판매율</td><td class="num">15.7%</td><td class="num"><span class="badge-up">개선중</span></td><td class="num">4월 322K 매출</td></tr>
-          <tr><td>26S PD 판매율</td><td class="num">26.5%</td><td class="num"><span class="badge-up">최고</span></td><td class="num">소진 양호</td></tr>
-        </table>
-      </div>
-
-      <div class="box box-blue" style="margin-top:6px;">
-        <div class="box-title blue">🎯 DISCOVERY 긴급 대응 방향 & 향후 전략</div>
-        <ul>
-          <li><b>적자 원인 명확화:</b> 기존 백화점 매장의 높은 감가상각비 부담(1~2년 단기 상각) — 온라인·신규 매장(D05)은 흑자, 백화점 채널 구조적 문제</li>
-          <li><b>과시즌S(25S) 8,137K 긴급 소진:</b> YoY 12,861% 급증 — 5~6월 온라인 집중 판매 + <b>하반기 신규 아울렛 활용</b> 계획</li>
-          <li><b>홍콩 과다 재고 이전 방안 검토:</b> 홍콩 DISCOVERY 과다 재고(약 30억) → 대만 신규 아울렛 이전 — 내부거래 감안 관세 부담 최소화, 감가상각 최대 적용한 낮은 가격으로 이전</li>
-          <li><b>하반기 출점 계획:</b> 아울렛 1개 + 온라인(SHOPEE) 1개 + 쇼핑몰 2개 — 백화점 신규 입점은 보류, 수수료 낮고 MG 조건 없는 쇼핑몰 위주 확장</li>
-          <li><b>매출 수준 벤치마크 (22년 기준):</b> SS 시즌 MLB 매장 대비 약 50%, FW 시즌 MLB 대비 20% 높음 — 시즌별 차별화 전략 필요</li>
-          <li><b>상품 구성 미스매치 해소:</b> 현지 시장의 라이프스타일 제품 선호 vs 현재 커뮤터웨어 중심 구성 — 차년도 상품 구성 변화 기대</li>
-          <li><b>D05 Hanshin TC 성공 모델 확산:</b> 첫달 314K 분석 후 하반기 쇼핑몰 2개점에 적용</li>
-          <li><b>26S 판매율 제고:</b> RS·WJ·TS 4월 강세 지속, PD 모델(26.5%) 타 카테고리 확산으로 누적 판매율 25%+ 목표</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <hr class="divider">
-
-  <!-- ===== SECTION 8 ===== -->
-  <div class="page-title" id="sec8">8. 전략 & Action Plan</div>
-
-  <div class="container">
-    <div class="left">
-      <div class="box box-red">
-        <div class="box-title red">🔥 즉시 실행 (Immediate Actions)</div>
-        <ul>
-          <li><b>25F 의류 재고 (YoY 110%) 소진:</b> 19,331K — 5~7월 집중 소진 계획, 아울렛 이관 또는 마크다운 즉시 실행</li>
-          <li><b>23F 2년차 재고 처분 (YoY 181%):</b> 6,355K — 추가 Write-off 또는 특별 할인 행사 즉시 검토</li>
-          <li><b>아울렛 YoY 회복 (MK TC Outlet 77%):</b> 정상채널 강세로 인한 디커플링 완화 — 아울렛 전용 상품 라인 도입 시급</li>
-          <li><b>4월 급여 316% 급증 원인 명확화:</b> TW Office 인센티브 659K(전년 3월 358K 반영분 누적) 일시 반영 영향 — 경상비 정상화 5월부터 확인, 인센티브 회계 처리 일정 사전 공유로 향후 변동성 관리</li>
-          <li><b>재고조정비 추가 발생 방지:</b> 23F 2년차(6,355K) 추가 Write-off 가능성 점검</li>
-          <li><b>물류비 정상화 확인:</b> 정품택 교체 완료 여부 점검 — 5월부터 전년 수준 복귀 여부 모니터링</li>
-          <li><b>ZHONGXIAO 1호점 56평 효율 개선:</b> 이익률 7.4% — 고마진 상품 확대 + VIP 체험공간 즉시 도입</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="right">
-      <div class="box box-dark">
-        <div style="font-weight:bold;font-size:9px;margin-bottom:4px;">📌 2026년 핵심 KPI 현황 (MLB TW, 1~4월 누적)</div>
-        <table style="color:white;">
-          <tr>
-            <th style="background:rgba(255,255,255,0.1);color:white;border-color:rgba(255,255,255,0.2);">지표</th>
-            <th style="background:rgba(255,255,255,0.1);color:white;border-color:rgba(255,255,255,0.2);" class="num">1~4월 실적</th>
-            <th style="background:rgba(255,255,255,0.1);color:white;border-color:rgba(255,255,255,0.2);" class="num">연간 목표</th>
-            <th style="background:rgba(255,255,255,0.1);color:white;border-color:rgba(255,255,255,0.2);" class="num">상태</th>
-          </tr>
-          <tr><td style="border-color:rgba(255,255,255,0.1);">실판매출 YoY</td><td style="border-color:rgba(255,255,255,0.1);" class="num">119%</td><td style="border-color:rgba(255,255,255,0.1);" class="num">112%↑</td><td style="border-color:rgba(255,255,255,0.1);" class="num">✅</td></tr>
-          <tr><td style="border-color:rgba(255,255,255,0.1);">영업이익률(누적)</td><td style="border-color:rgba(255,255,255,0.1);" class="num">10.0%</td><td style="border-color:rgba(255,255,255,0.1);" class="num">13%↑</td><td style="border-color:rgba(255,255,255,0.1);" class="num">⚠️</td></tr>
-          <tr><td style="border-color:rgba(255,255,255,0.1);">직접이익률(누적)</td><td style="border-color:rgba(255,255,255,0.1);" class="num">19.1%</td><td style="border-color:rgba(255,255,255,0.1);" class="num">20%↑</td><td style="border-color:rgba(255,255,255,0.1);" class="num">⚠️</td></tr>
-          <tr><td style="border-color:rgba(255,255,255,0.1);">할인율(누적)</td><td style="border-color:rgba(255,255,255,0.1);" class="num">20.1%</td><td style="border-color:rgba(255,255,255,0.1);" class="num">18%이하</td><td style="border-color:rgba(255,255,255,0.1);" class="num">⚠️</td></tr>
-          <tr><td style="border-color:rgba(255,255,255,0.1);">5월 MTD YoY</td><td style="border-color:rgba(255,255,255,0.1);" class="num">102%</td><td style="border-color:rgba(255,255,255,0.1);" class="num">112%↑</td><td style="border-color:rgba(255,255,255,0.1);" class="num">⚠️</td></tr>
-          <tr><td style="border-color:rgba(255,255,255,0.1);">아울렛 YoY(누적)</td><td style="border-color:rgba(255,255,255,0.1);" class="num">94%</td><td style="border-color:rgba(255,255,255,0.1);" class="num">100%↑</td><td style="border-color:rgba(255,255,255,0.1);" class="num">🔴</td></tr>
-          <tr><td style="border-color:rgba(255,255,255,0.1);">흑자매장 비율</td><td style="border-color:rgba(255,255,255,0.1);" class="num">94%</td><td style="border-color:rgba(255,255,255,0.1);" class="num">100%</td><td style="border-color:rgba(255,255,255,0.1);" class="num">⚠️</td></tr>
-          <tr><td style="border-color:rgba(255,255,255,0.1);">온라인 비중(누적)</td><td style="border-color:rgba(255,255,255,0.1);" class="num">26.9%</td><td style="border-color:rgba(255,255,255,0.1);" class="num">30%↑</td><td style="border-color:rgba(255,255,255,0.1);" class="num">⚠️</td></tr>
-          <tr><td style="border-color:rgba(255,255,255,0.1);">26S 판매율(YTD)</td><td style="border-color:rgba(255,255,255,0.1);" class="num">32.8%(+11.4%p)</td><td style="border-color:rgba(255,255,255,0.1);" class="num">목표 대비 양호</td><td style="border-color:rgba(255,255,255,0.1);" class="num">✅</td></tr>
-          <tr><td style="border-color:rgba(255,255,255,0.1);">영업비율(누적)</td><td style="border-color:rgba(255,255,255,0.1);" class="num">9.2%</td><td style="border-color:rgba(255,255,255,0.1);" class="num">6.5%이하</td><td style="border-color:rgba(255,255,255,0.1);" class="num">🔴</td></tr>
-        </table>
-      </div>
-    </div>
-  </div>
-
-  <div class="container" style="margin-top:6px;">
-    <div class="left">
-      <div class="box box-yellow">
-        <div class="box-title yellow">📋 단기 과제 (1~3개월)</div>
-        <ul>
-          <li><b>아울렛 YoY 94% 개선:</b> Mitsui TC(77%) 집중 — 과시즌S 2년차(24S) 8,822K 집중 투입, 전용 MD 구성</li>
-          <li><b>온라인 비중 27%→30% 로드맵:</b> Official Online 135% 가속 + SHOPEE 167% 유지 + MOMO 회복 지속</li>
-          <li><b>TAIMALL 127% 성장 모델 확산:</b> 이익률 10% 이하 매장(ZHONGXIAO·중우타이중 등) 벤치마킹 적용</li>
-          <li><b>ZHONGXIAO 1호점 56평 재구성:</b> 고마진 상품 확대(모자 CP·WJ) + VIP 체험공간 도입</li>
-          <li><b>DISCOVERY 오프라인 흑자 전환 로드맵:</b> 6개월 내 미달 시 매장 구조조정 의사결정</li>
-          <li><b>재고조정비용 관리:</b> 23FW 2년차 추가 발생 선제 식별 + Write-off 일정 명확화</li>
-          <li><b>4월 인건비 효과 분리 분석 완료:</b> 인센티브 659K 일시 반영 영향 — 5월부터 경상 인건비율 정상화 모니터링, 매장 확장(+2명) 효과는 정상 흐름</li>
-        </ul>
-      </div>
-    </div>
-    <div class="right">
-      <div class="box box-blue">
-        <div class="box-title blue">🎯 중장기 전략 (3~6개월+)</div>
-        <ul>
-          <li><b>온라인 비중 30% 달성:</b> Official Online 자사몰 강화 + SHOPEE 고성장 지속 + LINE GIFT 활성화</li>
-          <li><b>할인율 목표 18% 이하:</b> 리테일 10%, 온라인 18%, 아울렛 42% 채널별 목표 설정</li>
-          <li><b>소형(19~30평) 표준 매장화:</b> TAIPEI 101(19평)·Nanfang TS Mall(30평) 모델 기준 신규 입점 검토</li>
-          <li><b>신규 출점 효과 확장:</b> HANSHIN TC·LALAPORT TC·NANGANG LALAPORT 4개월 BEP 달성 모델 표준화</li>
-          <li><b>과시즌 재고 연간 YoY 70% 이하:</b> 아울렛 전용 상품 라인 도입 + 온라인 특가 소진 병행</li>
-          <li><b>매장 포트폴리오 최적화:</b> ZHONGXIAO SOGO 정리 완료 후 30평 이하 표준 프리미엄 매장 확대 방향</li>
-          <li><b>영업비율 목표 6.5%:</b> 현 9.2%에서 임차료 재협상 + 인건비 효율화 + CREW ROI 개선으로 달성</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="footer">
-    F&F Taiwan · MLB Brand Monthly Report · 2026년 04월 · Confidential · 단위: K HKD · 분석기준: 2026년 4월 vs 2025년 4월 (YoY) · 5월 추세 기준일: 2026.05.12 · 일부 당월 손익 수치는 추정 기준
-  </div>
-
-</div>
+    <footer class="foot">F&amp;F Taiwan · MLB Brand Monthly Report · 2026년 05월 · Confidential · 기준일 2026.05.31 · 단위 K HKD 환산</footer>
+  </main>
 </body>
 </html>
