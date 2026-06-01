@@ -71,13 +71,13 @@
 <div class="nav-bar">
   <span class="nav-brand">MLB TW 5월</span>
   <a onclick="document.getElementById('sec1').scrollIntoView({behavior:'smooth'})">1.Executive Summary</a>
-  <a onclick="document.getElementById('sec2').scrollIntoView({behavior:'smooth'})">2.1~4월 대비</a>
-  <a onclick="document.getElementById('sec3').scrollIntoView({behavior:'smooth'})">3.채널/매장</a>
-  <a onclick="document.getElementById('sec4').scrollIntoView({behavior:'smooth'})">4.상품/재고</a>
-  <a onclick="document.getElementById('sec5').scrollIntoView({behavior:'smooth'})">5.예상손익</a>
-  <a onclick="document.getElementById('sec6').scrollIntoView({behavior:'smooth'})">6.W22 점검</a>
-  <a onclick="document.getElementById('sec7').scrollIntoView({behavior:'smooth'})">7.DISCOVERY</a>
-  <a onclick="document.getElementById('sec8').scrollIntoView({behavior:'smooth'})">8.Action Plan</a>
+  <a onclick="document.getElementById('sec-change').scrollIntoView({behavior:'smooth'})">1-1.월별변화</a>
+  <a onclick="document.getElementById('sec2').scrollIntoView({behavior:'smooth'})">2.채널/매장</a>
+  <a onclick="document.getElementById('sec3').scrollIntoView({behavior:'smooth'})">3.상품/재고</a>
+  <a onclick="document.getElementById('sec4').scrollIntoView({behavior:'smooth'})">4.예상손익</a>
+  <a onclick="document.getElementById('sec5').scrollIntoView({behavior:'smooth'})">5.W22 점검</a>
+  <a onclick="document.getElementById('sec6').scrollIntoView({behavior:'smooth'})">6.DISCOVERY</a>
+  <a onclick="document.getElementById('sec7').scrollIntoView({behavior:'smooth'})">7.Action Plan</a>
 </div>
 
 <div class="wrap">
@@ -140,42 +140,55 @@
   </div>
 
   <hr class="divider">
-  <div class="page-title" id="sec2">2. 1~4월 대비 5월 변화 — 성장률 둔화 속 판매율 · 재고 개선</div>
-  <div class="trend-grid">
-    <div class="trend-box"><div class="trend-label">실판매출</div><div class="trend-value">14,046K</div><div class="trend-sub up">4월 13,862K 대비 +1.3%</div></div>
-    <div class="trend-box"><div class="trend-label">실판매출 YoY</div><div class="trend-value">102%</div><div class="trend-sub down">4월 128% 대비 -26%p</div></div>
-    <div class="trend-box"><div class="trend-label">할인율</div><div class="trend-value">23.9%</div><div class="trend-sub down">4월 20.0% 대비 +3.9%p</div></div>
-    <div class="trend-box"><div class="trend-label">26SS 의류 판매율</div><div class="trend-value">42.0%</div><div class="trend-sub up">4월 말 32.8% 대비 +9.2%p</div></div>
-    <div class="trend-box"><div class="trend-label">과시즌S 의류 재고</div><div class="trend-value">19,533K</div><div class="trend-sub up">4월 말 22,050K 대비 -11.4%</div></div>
-  </div>
+  <div class="page-title" id="sec-change">1-1. 1~4월 흐름 대비 5월 마감 변화</div>
   <div class="container">
     <div class="left">
       <div class="section">
         <div class="section-title">채널별 YoY 변화</div>
         <table>
-          <tr><th>채널</th><th class="num">Q1 YoY</th><th class="num">4월 YoY</th><th class="num">5월 YoY</th><th>변화</th></tr>
-          <tr><td>리테일</td><td class="num">119%</td><td class="num">130%</td><td class="num">104%</td><td><span class="badge-down">둔화</span></td></tr>
-          <tr><td>아울렛</td><td class="num">93%</td><td class="num">97%</td><td class="num">107%</td><td><span class="badge-up">회복</span></td></tr>
-          <tr><td>온라인</td><td class="num">123%</td><td class="num">146%</td><td class="num">93%</td><td><span class="badge-down">역성장</span></td></tr>
-          <tr class="total"><td>TW 전체</td><td class="num">116%</td><td class="num">128%</td><td class="num">102%</td><td>성장 유지 · 속도 둔화</td></tr>
+          <tr><th>채널</th><th class="num">1~3월 누적</th><th class="num">4월</th><th class="num">5월</th><th>변화 해석</th></tr>
+          <tr><td>리테일</td><td class="num">119%</td><td class="num">130%</td><td class="num"><span class="badge-warn">104%</span></td><td>성장률 둔화</td></tr>
+          <tr><td>아울렛</td><td class="num">93%</td><td class="num">97%</td><td class="num"><span class="badge-up">107%</span></td><td>회복 전환</td></tr>
+          <tr><td>온라인</td><td class="num">123%</td><td class="num">146%</td><td class="num"><span class="badge-down">93%</span></td><td>역성장 전환</td></tr>
+          <tr class="total"><td>TW 전체</td><td class="num">116%</td><td class="num">128%</td><td class="num"><span class="badge-warn">102%</span></td><td>성장 유지 · 속도 둔화</td></tr>
+        </table>
+      </div>
+      <div class="section">
+        <div class="section-title">핵심 KPI 변화</div>
+        <table>
+          <tr><th>지표</th><th class="num">4월</th><th class="num">5월</th><th>변화</th></tr>
+          <tr><td>실판매출</td><td class="num">13,862K</td><td class="num">14,046K</td><td><span class="badge-up">+184K</span></td></tr>
+          <tr><td>실판매출 YoY</td><td class="num">128%</td><td class="num">102%</td><td><span class="badge-down">-26%p</span></td></tr>
+          <tr><td>할인율</td><td class="num">20.0%</td><td class="num">23.9%</td><td><span class="badge-warn">+3.9%p</span></td></tr>
+          <tr><td>영업이익</td><td class="num">497K</td><td class="num">1,664K</td><td><span class="badge-up">+1,167K</span></td></tr>
+          <tr><td>과시즌S 의류 재고</td><td class="num">22,050K</td><td class="num">19,533K</td><td><span class="badge-up">-2,517K</span></td></tr>
         </table>
       </div>
     </div>
     <div class="right">
       <div class="box box-blue">
-        <div class="box-title blue">1~4월 대비 5월 핵심 해석</div>
+        <div class="box-title blue">5월 변화 핵심 해석</div>
         <ul>
-          <li><b>매출 규모는 유지:</b> 5월 실판매출은 14,046K로 4월 대비 +1.3% 증가했으나 YoY는 128%에서 102%로 둔화.</li>
-          <li><b>채널 믹스 변화:</b> 리테일 성장률 둔화와 온라인 역성장을 아울렛 회복이 일부 보완.</li>
-          <li><b>상품 소진 개선:</b> 26SS 의류 판매율은 32.8%에서 42.0%로 +9.2%p 상승.</li>
-          <li><b>재고 부담 완화:</b> 과시즌S 의류 재고는 22,050K에서 19,533K로 -11.4% 감소.</li>
+          <li><b>매출은 소폭 증가:</b> 실판매출이 4월 13,862K에서 5월 14,046K로 184K 증가. 다만 YoY는 128%에서 102%로 둔화.</li>
+          <li><b>성장축은 아울렛:</b> 아울렛은 4월 YoY 97%에서 5월 107%로 회복. GLORIA OUTLET 1,026K, YoY 122%가 성장 견인.</li>
+          <li><b>리테일은 성장률 둔화:</b> 1~3월 119% → 4월 130% → 5월 104%. ZHONGXIAO 재오픈과 HANSHIN TC 신규점 효과에도 기존점 회복 관리 필요.</li>
+          <li><b>온라인은 역성장:</b> 123% → 146% → 93%로 급격히 낮아졌고 5월 목표비도 85.6%. 채널별 프로모션 재설계 필요.</li>
+          <li><b>재고 개선은 성과:</b> 과시즌S 의류 재고가 22,050K에서 19,533K로 2,517K 감소. 다만 할인율은 20.0%에서 23.9%로 상승.</li>
+        </ul>
+      </div>
+      <div class="box box-yellow">
+        <div class="box-title yellow">수익성 관점</div>
+        <ul>
+          <li><b>영업이익 개선:</b> 4월 497K에서 5월 예상 1,664K로 증가. 4월 일회성 영업비 부담 완화 영향도 함께 확인 필요.</li>
+          <li><b>직접이익은 계획 미달:</b> 5월 예상 2,727K로 계획 3,574K 대비 76%. 할인율 상승과 매출 계획 미달이 부담.</li>
+          <li><b>6월 우선순위:</b> 온라인 회복, 저성과 매장 개선, 과시즌 소진과 이익률의 균형 관리.</li>
         </ul>
       </div>
     </div>
   </div>
 
   <hr class="divider">
-  <div class="page-title" id="sec3">3. 채널 · 매장별 5월 실판매출 마감 분석</div>
+  <div class="page-title" id="sec2">2. 채널 · 매장별 5월 실판매출 마감 분석</div>
   <div class="container">
     <div class="left">
       <div class="section">
@@ -233,7 +246,7 @@
   </div>
 
   <hr class="divider">
-  <div class="page-title" id="sec4">4. 26SS 판매율 · 과시즌 의류 재고</div>
+  <div class="page-title" id="sec3">3. 26SS 판매율 · 과시즌 의류 재고</div>
   <div class="trend-grid">
     <div class="trend-box"><div class="trend-label">26SS 의류 판매율</div><div class="trend-value">42.0%</div><div class="trend-sub up">YoY +10.0%p</div></div>
     <div class="trend-box"><div class="trend-label">Outer 판매율</div><div class="trend-value">43.7%</div><div class="trend-sub up">WoW +0.6%p</div></div>
@@ -266,7 +279,7 @@
   </div>
 
   <hr class="divider">
-  <div class="page-title" id="sec5">5. 5월 예상 손익 요약 — 실판매출 마감 후 예상 변동비 및 고정비 적용</div>
+  <div class="page-title" id="sec4">4. 5월 예상 손익 요약 — 실판매출 마감 후 예상 변동비 및 고정비 적용</div>
   <div class="section">
     <div class="section-title">TW-M 예상 손익 (K HKD 환산)</div>
     <table>
@@ -285,7 +298,7 @@
   </div>
 
   <hr class="divider">
-  <div class="page-title" id="sec6">6. W22 주간 점검 — 2026.05.25~05.31</div>
+  <div class="page-title" id="sec5">5. W22 주간 점검 — 2026.05.25~05.31</div>
   <div class="container">
     <div class="left">
       <div class="box box-red">
@@ -311,7 +324,7 @@
   </div>
 
   <hr class="divider">
-  <div class="page-title" id="sec7">7. DISCOVERY Taiwan 현황 — 5월 실판매출 마감 후 예상 손익</div>
+  <div class="page-title" id="sec6">6. DISCOVERY Taiwan 현황 — 5월 실판매출 마감 후 예상 손익</div>
   <div class="kpi-grid">
     <div class="kpi-box"><div class="kpi-label">DX TW 실판매출</div><div class="kpi-value">1,963K</div><div class="kpi-change down">계획비 94.8%</div></div>
     <div class="kpi-box"><div class="kpi-label">DX TW Tag 매출</div><div class="kpi-value">2,331K</div><div class="kpi-change down">계획비 94.1%</div></div>
@@ -322,7 +335,7 @@
   <div class="note">MLB 본문과 분리한 참고 지표. 출처: plan-vs-actual JSON의 TW-X.</div>
 
   <hr class="divider">
-  <div class="page-title" id="sec8">8. 향후 전망 &amp; Action Plan</div>
+  <div class="page-title" id="sec7">7. 향후 전망 &amp; Action Plan</div>
   <div class="container">
     <div class="left">
       <div class="box box-orange">
