@@ -39,6 +39,10 @@
     .badge-up { color: #276749; background: #c6f6d5; }
     .badge-down { color: #c53030; background: #fed7d7; }
     .badge-warn { color: #975a16; background: #fefcbf; }
+    .signal { display: inline-block; width: 7px; height: 7px; border-radius: 50%; vertical-align: middle; }
+    .signal.green { background: #38a169; }
+    .signal.yellow { background: #ecc94b; }
+    .signal.red { background: #e53e3e; }
     .kpi-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 4px; margin-bottom: 8px; }
     .kpi-box, .trend-box { padding: 5px 4px; border: 1px solid #e2e8f0; border-radius: 4px; background: #f7fafc; text-align: center; }
     .kpi-label, .trend-label { margin-bottom: 1px; color: #718096; font-size: 6.5px; }
@@ -273,32 +277,32 @@
   <div class="section">
     <div class="section-title">전체 매장별 MTD · YTD 실판매출 (K HKD)</div>
     <table>
-      <tr><th>채널</th><th>매장</th><th class="num">5월 MTD</th><th class="num">YTD 누적</th><th class="num">목표비</th><th class="num">MTD YoY</th></tr>
-      <tr><td>리테일</td><td>HANSHIN ARENA</td><td class="num">1,275K</td><td class="num">6,359K</td><td class="num"><span class="badge-up">103.1%</span></td><td class="num">107%</td></tr>
-      <tr><td>리테일</td><td>TAIPEI 101</td><td class="num">735K</td><td class="num">3,832K</td><td class="num"><span class="badge-warn">99.1%</span></td><td class="num">132%</td></tr>
-      <tr><td>리테일</td><td>TAIMALL</td><td class="num">709K</td><td class="num">3,616K</td><td class="num"><span class="badge-warn">95.5%</span></td><td class="num">106%</td></tr>
-      <tr><td>리테일</td><td>MITSUKOSHI NANJING</td><td class="num">690K</td><td class="num">3,501K</td><td class="num"><span class="badge-warn">99.6%</span></td><td class="num">110%</td></tr>
-      <tr><td>리테일</td><td>MAGA CITY BANQIAO</td><td class="num">673K</td><td class="num">3,574K</td><td class="num"><span class="badge-down">93.8%</span></td><td class="num">104%</td></tr>
-      <tr><td>리테일</td><td>METROWALK</td><td class="num">546K</td><td class="num">3,109K</td><td class="num"><span class="badge-up">100.4%</span></td><td class="num">122%</td></tr>
-      <tr><td>리테일</td><td>TS MALL</td><td class="num">619K</td><td class="num">3,051K</td><td class="num"><span class="badge-up">100.1%</span></td><td class="num">114%</td></tr>
-      <tr><td>리테일</td><td>TAICHUNG LALAPORT</td><td class="num">566K</td><td class="num">3,144K</td><td class="num"><span class="badge-warn">95.3%</span></td><td class="num">신규</td></tr>
-      <tr><td>리테일</td><td>NANGANG LALAPORT</td><td class="num">486K</td><td class="num">2,607K</td><td class="num"><span class="badge-down">78.6%</span></td><td class="num">84%</td></tr>
-      <tr><td>리테일</td><td>CHUNGYO</td><td class="num">480K</td><td class="num">2,861K</td><td class="num"><span class="badge-down">80.8%</span></td><td class="num">80%</td></tr>
-      <tr><td>리테일</td><td>SKM Tainan</td><td class="num">559K</td><td class="num">2,645K</td><td class="num"><span class="badge-down">90.3%</span></td><td class="num">97%</td></tr>
-      <tr><td>리테일</td><td>ZHONGXIAO</td><td class="num">876K</td><td class="num">3,101K</td><td class="num"><span class="badge-up">141.6%</span></td><td class="num">171%</td></tr>
-      <tr><td>리테일</td><td>HANSHIN TC</td><td class="num">759K</td><td class="num">1,432K</td><td class="num"><span class="badge-up">122.7%</span></td><td class="num">신규</td></tr>
-      <tr class="total"><td colspan="2">리테일 소계</td><td class="num">8,973K</td><td class="num">42,832K</td><td class="num">100.2%</td><td class="num">104%</td></tr>
-      <tr><td>온라인</td><td>MOMO</td><td class="num">1,114K</td><td class="num">6,515K</td><td class="num"><span class="badge-down">83.4%</span></td><td class="num">92%</td></tr>
-      <tr><td>온라인</td><td>Official Online</td><td class="num">1,279K</td><td class="num">8,252K</td><td class="num"><span class="badge-down">86.2%</span></td><td class="num">93%</td></tr>
-      <tr><td>온라인</td><td>SHOPEE</td><td class="num">719K</td><td class="num">4,504K</td><td class="num"><span class="badge-down">88.0%</span></td><td class="num">96%</td></tr>
-      <tr class="total"><td colspan="2">온라인 소계</td><td class="num">3,112K</td><td class="num">19,271K</td><td class="num">85.6%</td><td class="num">93%</td></tr>
-      <tr><td>아울렛</td><td>MK TC Outlet</td><td class="num">548K</td><td class="num">3,112K</td><td class="num"><span class="badge-warn">96.3%</span></td><td class="num">101%</td></tr>
-      <tr><td>아울렛</td><td>LINKOU</td><td class="num">387K</td><td class="num">2,139K</td><td class="num"><span class="badge-down">87.0%</span></td><td class="num">87%</td></tr>
-      <tr><td>아울렛</td><td>GLORIA OUTLET</td><td class="num">1,026K</td><td class="num">5,719K</td><td class="num"><span class="badge-up">118.5%</span></td><td class="num">122%</td></tr>
-      <tr class="total"><td colspan="2">아울렛 소계</td><td class="num">1,961K</td><td class="num">10,970K</td><td class="num">104.3%</td><td class="num">107%</td></tr>
-      <tr class="total"><td colspan="2">TW 활성 매장 합계</td><td class="num">14,046K</td><td class="num">73,073K</td><td class="num">97.0%</td><td class="num">102%</td></tr>
+      <tr><th>채널</th><th>매장</th><th class="num">신호등</th><th class="num">5월 MTD</th><th class="num">YTD 누적</th><th class="num">목표비</th><th class="num">MTD YoY</th><th class="num">YTD YoY</th></tr>
+      <tr><td>리테일</td><td>HANSHIN ARENA</td><td class="num"><span class="signal green"></span></td><td class="num">1,275K</td><td class="num">6,359K</td><td class="num"><span class="badge-up">103.1%</span></td><td class="num">107%</td><td class="num">162%</td></tr>
+      <tr><td>리테일</td><td>TAIPEI 101</td><td class="num"><span class="signal yellow"></span></td><td class="num">735K</td><td class="num">3,832K</td><td class="num"><span class="badge-warn">99.1%</span></td><td class="num">132%</td><td class="num">133%</td></tr>
+      <tr><td>리테일</td><td>TAIMALL</td><td class="num"><span class="signal yellow"></span></td><td class="num">709K</td><td class="num">3,616K</td><td class="num"><span class="badge-warn">95.5%</span></td><td class="num">106%</td><td class="num">122%</td></tr>
+      <tr><td>리테일</td><td>MITSUKOSHI NANJING</td><td class="num"><span class="signal yellow"></span></td><td class="num">690K</td><td class="num">3,501K</td><td class="num"><span class="badge-warn">99.6%</span></td><td class="num">110%</td><td class="num">125%</td></tr>
+      <tr><td>리테일</td><td>MAGA CITY BANQIAO</td><td class="num"><span class="signal red"></span></td><td class="num">673K</td><td class="num">3,574K</td><td class="num"><span class="badge-down">93.8%</span></td><td class="num">104%</td><td class="num">117%</td></tr>
+      <tr><td>리테일</td><td>METROWALK</td><td class="num"><span class="signal green"></span></td><td class="num">546K</td><td class="num">3,109K</td><td class="num"><span class="badge-up">100.4%</span></td><td class="num">122%</td><td class="num">148%</td></tr>
+      <tr><td>리테일</td><td>TS MALL</td><td class="num"><span class="signal green"></span></td><td class="num">619K</td><td class="num">3,051K</td><td class="num"><span class="badge-up">100.1%</span></td><td class="num">114%</td><td class="num">138%</td></tr>
+      <tr><td>리테일</td><td>TAICHUNG LALAPORT</td><td class="num"><span class="signal yellow"></span></td><td class="num">566K</td><td class="num">3,144K</td><td class="num"><span class="badge-warn">95.3%</span></td><td class="num">신규</td><td class="num">신규</td></tr>
+      <tr><td>리테일</td><td>NANGANG LALAPORT</td><td class="num"><span class="signal red"></span></td><td class="num">486K</td><td class="num">2,607K</td><td class="num"><span class="badge-down">78.6%</span></td><td class="num">84%</td><td class="num">271%</td></tr>
+      <tr><td>리테일</td><td>CHUNGYO</td><td class="num"><span class="signal red"></span></td><td class="num">480K</td><td class="num">2,861K</td><td class="num"><span class="badge-down">80.8%</span></td><td class="num">80%</td><td class="num">110%</td></tr>
+      <tr><td>리테일</td><td>SKM Tainan</td><td class="num"><span class="signal red"></span></td><td class="num">559K</td><td class="num">2,645K</td><td class="num"><span class="badge-down">90.3%</span></td><td class="num">97%</td><td class="num">125%</td></tr>
+      <tr><td>리테일</td><td>ZHONGXIAO</td><td class="num"><span class="signal green"></span></td><td class="num">876K</td><td class="num">3,101K</td><td class="num"><span class="badge-up">141.6%</span></td><td class="num">171%</td><td class="num">113%</td></tr>
+      <tr><td>리테일</td><td>HANSHIN TC</td><td class="num"><span class="signal green"></span></td><td class="num">759K</td><td class="num">1,432K</td><td class="num"><span class="badge-up">122.7%</span></td><td class="num">신규</td><td class="num">신규</td></tr>
+      <tr class="total"><td colspan="3">리테일 소계</td><td class="num">8,973K</td><td class="num">42,832K</td><td class="num">100.2%</td><td class="num">104%</td><td class="num">151%</td></tr>
+      <tr><td>온라인</td><td>MOMO</td><td class="num"><span class="signal red"></span></td><td class="num">1,114K</td><td class="num">6,515K</td><td class="num"><span class="badge-down">83.4%</span></td><td class="num">92%</td><td class="num">102%</td></tr>
+      <tr><td>온라인</td><td>Official Online</td><td class="num"><span class="signal red"></span></td><td class="num">1,279K</td><td class="num">8,252K</td><td class="num"><span class="badge-down">86.2%</span></td><td class="num">93%</td><td class="num">126%</td></tr>
+      <tr><td>온라인</td><td>SHOPEE</td><td class="num"><span class="signal red"></span></td><td class="num">719K</td><td class="num">4,504K</td><td class="num"><span class="badge-down">88.0%</span></td><td class="num">96%</td><td class="num">149%</td></tr>
+      <tr class="total"><td colspan="3">온라인 소계</td><td class="num">3,112K</td><td class="num">19,271K</td><td class="num">85.6%</td><td class="num">93%</td><td class="num">121%</td></tr>
+      <tr><td>아울렛</td><td>MK TC Outlet</td><td class="num"><span class="signal yellow"></span></td><td class="num">548K</td><td class="num">3,112K</td><td class="num"><span class="badge-warn">96.3%</span></td><td class="num">101%</td><td class="num">92%</td></tr>
+      <tr><td>아울렛</td><td>LINKOU</td><td class="num"><span class="signal red"></span></td><td class="num">387K</td><td class="num">2,139K</td><td class="num"><span class="badge-down">87.0%</span></td><td class="num">87%</td><td class="num">82%</td></tr>
+      <tr><td>아울렛</td><td>GLORIA OUTLET</td><td class="num"><span class="signal green"></span></td><td class="num">1,026K</td><td class="num">5,719K</td><td class="num"><span class="badge-up">118.5%</span></td><td class="num">122%</td><td class="num">106%</td></tr>
+      <tr class="total"><td colspan="3">아울렛 소계</td><td class="num">1,961K</td><td class="num">10,970K</td><td class="num">104.3%</td><td class="num">107%</td><td class="num">97%</td></tr>
+      <tr class="total"><td colspan="3">TW 활성 매장 합계</td><td class="num">14,046K</td><td class="num">73,073K</td><td class="num">97.0%</td><td class="num">102%</td><td class="num">131%</td></tr>
     </table>
-    <div class="note">활성 19개 매장 기준 · 비활성 매장 제외 · YTD는 2026.05.12 누적 원본에 이후 MTD 마감 증분을 반영.</div>
+    <div class="note">활성 19개 매장 기준 · 비활성 매장 제외 · YTD는 2026.05.12 누적 원본에 이후 MTD 마감 증분을 반영 · 신호등: 목표비 100% 이상 녹색, 95~99% 노란색, 95% 미만 빨간색.</div>
   </div>
 
   <hr class="divider">
